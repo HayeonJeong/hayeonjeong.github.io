@@ -57,8 +57,8 @@
   ],
   "research experience": [
     {
-      "name": "Multimedia Computing & Machine Learning (MCML) Group",
-      "position": "MS Student",
+      "name": "MS Student",
+      "position": "Multimedia Computing & Machine Learning (MCML) Group",
       "url": "https://mcml.yonsei.ac.kr/",
       "startDate": "2025-03-01",
       "endDate": "Present",
@@ -66,8 +66,8 @@
       "highlights": []
     },
     {
-      "name": "AI Safety Center",
-      "position": "Undergraduate Research Intern",
+      "name": "Undergraduate Research Intern",
+      "position": "AI Safety Center",
       "url": "https://aisc.ssu.ac.kr/",
       "startDate": "2023-06-01",
       "endDate": "2024-08-31",
@@ -89,7 +89,7 @@
       "authors": "Sohee Park, Hayeon Jeong, Daeseon Choi",
       "publisher": "IEEE AVSS, 2025",
       "releaseDate": "2025-08-11",
-      "url": "https://ieeexplore.ieee.org/document/10496143",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11149954",
       "summary": "We propose a defense against adversarial patch attacks on visible person detectors by leveraging infrared thermal information. By exploiting thermal differences between humans and adversarial patches, our method effectively detects and mitigates physical attacks while preserving performance on clean images."
     }
   ],
@@ -124,8 +124,25 @@
     {
       "title": "Academic Achievement Scholarship (Quarter Tuition)",
       "date": "2021",
-      "awarder": "Soongsil University",
+      "awarder": "School of Electronic Engineering, Soongsil University",
       "summary": ""
+    }
+  ],
+  "other experience": [
+    {
+      "title": "Data labeling assistant",
+      "date": "",
+      "summary": "Data labeling assistant for OCR processing service optimization (mathematical equations)."
+    },
+    {
+      "title": "KT Mentoring Program Mentor",
+      "date": "",
+      "summary": "Developed 6-month Math/English curriculum."
+    },
+    {
+      "title": "Baird Volunteer Corps Member, Soongsil University",
+      "date": "",
+      "summary": "Contributed to community safety through CCTV installation project with local police station; youth education volunteer programs."
     }
   ],
   "languages": [
@@ -138,17 +155,6 @@
       "language": "English",
       "fluency": "Fluent",
       "icon": ""
-    }
-  ],
-  "other experience": [
-    {
-      "item": "Data labeling assistant for OCR processing service optimization (mathematical equations)."
-    },
-    {
-      "item": "KT Mentoring Program Mentor – Developed 6-month Math/English curriculum."
-    },
-    {
-      "item": "Baird Volunteer Corps Member, Soongsil University – Contributed to community safety through CCTV installation project with local police station; youth education volunteer programs."
     }
   ],
   "interests": [
