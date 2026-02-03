@@ -172,8 +172,8 @@
   "references": [
     {
       "name": "Jong-Seok Lee",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Jong-Seok Lee is a professor of computer science at Yonsei University. He is a co-author of the paper 'Dominating vs. Dominated: Generative Collapse in Diffusion Models'."
+      "icon": "fa-solid fa-user-graduate",
+      "reference": "Jong-Seok Lee is a professor of School of Integrated Technology at Yonsei University. He is a co-author of the paper 'Dominating vs. Dominated: Generative Collapse in Diffusion Models'."
     }
   ]
 }
