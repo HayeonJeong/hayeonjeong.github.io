@@ -7,7 +7,7 @@ img: assets/img/projects/1_phonetic/phonetic_thumnail.png
 importance: 1
 category: 2025
 related_publications: true
---------------------------
+---
 
 ## Overview
 

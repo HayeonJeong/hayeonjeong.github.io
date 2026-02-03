@@ -8,15 +8,33 @@
   <ol class="bibliography">
     {% for project in sorted_projects limit: project_limit %}
       <li>
-        <div class="abbr">
-          <span class="badge badge-primary">{{ forloop.index }}</span>
-        </div>
-        <div class="content">
-          <div class="title">
-            <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">{{ project.title }}</a>
-          </div>
-          <div class="author">
-            {{ project.description }}
+        <div class="row">
+          {% if project.img %}
+            <div class="col col-sm-2 abbr">
+              <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
+                {%
+                  include figure.liquid
+                  loading="eager"
+                  path=project.img
+                  sizes="200px"
+                  class="preview z-depth-1 rounded"
+                  zoomable=true
+                  avoid_scaling=true
+                  alt=project.title
+                %}
+              </a>
+            </div>
+          {% endif %}
+          <div class="{% if project.img %}col-sm-8{% else %}col-sm-10{% endif %}">
+            <div class="title">
+              <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">{{ project.title }}</a>
+            </div>
+            <div class="author">
+              {{ project.description }}
+            </div>
+            <div class="links">
+              <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}" class="btn btn-sm z-depth-0" role="button">Project</a>
+            </div>
           </div>
         </div>
       </li>

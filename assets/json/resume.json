@@ -32,7 +32,7 @@
       "startDate": "2025-03-01",
       "endDate": "2027-02-01",
       "score": "4.0/4.0",
-      "courses": []
+      "summary": "4.0/4.0 GPA"
     },
     {
       "institution": "Visiting Student",
@@ -52,7 +52,7 @@
       "startDate": "2020-03-03",
       "endDate": "2025-02-21",
       "score": "4.11/4.5 (Magna Cum Laude)",
-      "courses": []
+      "summary": "4.1/4.5 GPA (Magna Cum Laude)"
     }
   ],
   "research experience": [
@@ -78,6 +78,7 @@
   "publications": [
     {
       "name": "Dominating vs. Dominated: Generative Collapse in Diffusion Models",
+      "authors": "Hayeon Jeong, Jong-Seok Lee",
       "publisher": "arXiv",
       "releaseDate": "2025-12-19",
       "url": "https://arxiv.org/abs/2512.20666",
@@ -85,6 +86,7 @@
     },
     {
       "name": "Infrared Thermal-Guided Adversarial Patch Defense for Robust Visible Person Detectors",
+      "authors": "Sohee Park, Hayeon Jeong, Daeseon Choi",
       "publisher": "IEEE AVSS, 2025",
       "releaseDate": "2025-08-11",
       "url": "https://ieeexplore.ieee.org/document/10496143",
@@ -138,34 +140,33 @@
       "icon": ""
     }
   ],
-  "volunteer": [
+  "other experience": [
     {
-      "organization": "Baird Volunteer Corp (BVC)",
-      "location": "Seoul, Republic of Korea",
-      "position": "Member",
-      "url": "",
-      "startDate": "2020-10-01",
-      "endDate": "2022-02-28",
-      "summary": "Contributed to community safety improvements through CCTV installation project with local police station, and participated in youth education volunteer programs.",
-      "highlights": []
+      "item": "Data labeling assistant for OCR processing service optimization (mathematical equations)."
+    },
+    {
+      "item": "KT Mentoring Program Mentor – Developed 6-month Math/English curriculum."
+    },
+    {
+      "item": "Baird Volunteer Corps Member, Soongsil University – Contributed to community safety through CCTV installation project with local police station; youth education volunteer programs."
     }
   ],
   "interests": [
     {
       "name": "Watching Formula 1 (F1) races",
-      "icon": "fa-solid fa-car"
+      "icon": "fa-solid fa-flag-checkered"
     },
     {
       "name": "Playing the piano",
-      "icon": "fa-solid fa-piano"
-    },
-    {
-      "name": "Listening to Jazz music",
       "icon": "fa-solid fa-music"
     },
     {
+      "name": "Listening to Jazz music",
+      "icon": "fa-solid fa-compact-disc"
+    },
+    {
       "name": "Baking cookies",
-      "icon": "fa-solid fa-cookie"
+      "icon": "fa-solid fa-cookie-bite"
     }
   ],
   "references": [
