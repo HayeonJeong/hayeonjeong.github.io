@@ -24,31 +24,31 @@
   },
   "education": [
     {
-      "institution": "Master of Science",
+      "institution": "Yonsei University",
       "location": "Seoul, Republic of Korea",
       "url": "https://www.yonsei.ac.kr/sites/en_sc/index.do",
       "area": "School of Integrated Technology",
-      "studyType": "Yonsei University",
+      "studyType": "Master of Science",
       "startDate": "2025-03-01",
       "endDate": "2027-02-01",
       "score": "4.0/4.0",
       "summary": "4.0/4.0 GPA"
     },
     {
-      "institution": "Visiting Student",
+      "institution": "University of California, Berkeley",
       "location": "Berkeley, United States",
       "url": "https://www.berkeley.edu/",
-      "studyType": "University of California, Berkeley",
+      "studyType": "Visiting Student",
       "startDate": "2023-01-10",
       "endDate": "2023-05-12",
       "courses": []
     },
     {
-      "institution": "Bachelor of Science",
+      "institution": "Soongsil University",
       "location": "Seoul, Republic of Korea",
       "url": "https://webtrans.llsollu.com:40443/ezweb?source=KO&target=EN&profileId=0012d8d1-14e0-4237-a6a5-a68bc015f94d&url=https%3A%2F%2Fssu.ac.kr%2F",
       "area": "Electronic and Information Engineering",
-      "studyType": "Soongsil University",
+      "studyType": "Bachelor of Science",
       "startDate": "2020-03-03",
       "endDate": "2025-02-21",
       "score": "4.11/4.5 (Magna Cum Laude)",
@@ -57,8 +57,8 @@
   ],
   "research experience": [
     {
-      "name": "MS Student",
-      "position": "Multimedia Computing & Machine Learning (MCML) Group",
+      "name": "Multimedia Computing & Machine Learning (MCML) Group",
+      "position": "M.S. Student",
       "url": "https://mcml.yonsei.ac.kr/",
       "startDate": "2025-03-01",
       "endDate": "Present",
@@ -66,8 +66,8 @@
       "highlights": []
     },
     {
-      "name": "Undergraduate Research Intern",
-      "position": "AI Safety Center",
+      "name": "AI Safety Center",
+      "position": "Undergraduate Research Intern",
       "url": "https://aisc.ssu.ac.kr/",
       "startDate": "2023-06-01",
       "endDate": "2024-08-31",
@@ -131,17 +131,20 @@
   "other experience": [
     {
       "title": "Data labeling assistant",
-      "date": "",
+      "startDate": "2023-07-01",
+      "endDate": "2023-09-30",
       "summary": "Data labeling assistant for OCR processing service optimization (mathematical equations)."
     },
     {
       "title": "KT Mentoring Program Mentor",
-      "date": "",
+      "startDate": "2020-10-01",
+      "endDate": "2022-03-31",
       "summary": "Developed 6-month Math/English curriculum."
     },
     {
       "title": "Baird Volunteer Corps Member, Soongsil University",
-      "date": "",
+      "startDate": "2020-10-01",
+      "endDate": "2022-02-28",
       "summary": "Contributed to community safety through CCTV installation project with local police station; youth education volunteer programs."
     }
   ],
