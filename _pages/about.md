@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: MS Student @ <a href="https://www.yonsei.ac.kr" target="_blank">Yonsei University</a>, <a href="https://mcml.yonsei.ac.kr" target="_blank">MCML Group</a> · Visiting Graduate Researcher @ UCLA
+subtitle: MS Student @ <a href="https://www.yonsei.ac.kr" target="_blank">Yonsei University</a>, <a href="https://mcml.yonsei.ac.kr" target="_blank">MCML Group</a><br>Visiting Graduate Researcher @ <a href="https://www.ucla.edu/" target="_blank">UCLA</a>
 
 profile:
   align: right
@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an MS student in the **Multimedia Computing & Machine Learning (MCML)** group at Yonsei University, advised by [Prof. Jong-Seok Lee](https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en). I am currently a six-month **Visiting Graduate Researcher** at the Computational Machine Learning Lab, UCLA, advised by Prof. Cho-Jui Hsieh.
+I am an MS student in the **Multimedia Computing & Machine Learning (MCML)** group at Yonsei University, advised by [Prof. Jong-Seok Lee](https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en). I am currently a six-month **Visiting Graduate Researcher** at the Computational Machine Learning Lab, UCLA, advised by [Prof. Cho-Jui Hsieh](https://web.cs.ucla.edu/~chohsieh/).
 
 My research interests span three connected directions: **diffusion models & image reward models**, **multi-modal models**, and **AI safety, trustworthy AI, and robustness**.
 
@@ -37,6 +37,6 @@ My research interests span three connected directions: **diffusion models & imag
 - **Soongsil University** — Electronic and Information Engineering, B.S. (Mar 2020 – Feb 2025), GPA 4.11/4.5 (Magna Cum Laude)
 
 **Experience**
-- **Visiting Graduate Researcher**, Computational Machine Learning Lab, UCLA (May 2026 – Oct 2026; six-month visit), advised by Prof. Cho-Jui Hsieh
+- **Visiting Graduate Researcher**, Computational Machine Learning Lab, UCLA (May 2026 – Oct 2026; six-month visit), advised by [Prof. Cho-Jui Hsieh](https://web.cs.ucla.edu/~chohsieh/)
 - **MS Student**, [MCML](https://mcml.yonsei.ac.kr), Yonsei University (Mar 2025 – Present)
-- **Undergraduate Research Intern**, AI Safety Center @ Soongsil University (Jun 2023 – Aug 2024)
+- **Undergraduate Research Intern**, AI Safety Center, Soongsil University (Jun 2023 – Aug 2024)
