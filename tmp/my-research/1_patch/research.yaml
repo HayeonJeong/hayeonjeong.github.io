@@ -1,0 +1,56 @@
+project: "Infrared Thermal-Guided Adversarial Patch Defense"
+venue: "AVSS 2025 (IEEE International Conference on Advanced Video and Signal-Based Surveillance)"
+status: "Published"
+role: "Co-author (2nd author)"
+affiliation: "Yonsei University"
+
+description: >
+  Thermal 카메라와 RGB 카메라를 결합한 visible person detector 보조 파이프라인.
+  Selective search로 thermal 이미지를 세그멘테이션하여 mask set을 생성하고,
+  RGB 이미지에 적용하여 마스킹 전후 detection confidence 변화를 분석했다.
+  지원/fit 계산에서는 공격 연구 관심사가 아니라 object detection, multimodal sensing,
+  physical-world CV evaluation 경험으로만 반영한다.
+
+fit_usage: >
+  현재 PhD 관심사로는 adversarial attack/defense 자체를 강조하지 않는다.
+  이 프로젝트는 object/person detection 구현 경험, thermal-RGB fusion 경험,
+  physical-world CV dataset/evaluation 경험으로만 보조적으로 사용한다.
+
+problem:
+  - Visible person detector가 물리적 occlusion/patch 조건에서 사람을 미탐지할 수 있음
+  - RGB만으론 low-light 및 patch 탐지에 한계
+  - Physical-world detection failure에 대한 정량 평가 데이터 부족
+
+method:
+  - Thermal 이미지에 selective search 적용 → thermal 강도·객체 크기·온도 분포 기반 세그멘테이션
+  - 세그멘테이션 결과로 mask set 생성 → RGB 이미지에 적용
+  - 마스킹 전후 detection confidence 비교로 detection 변화 분석
+  - 최고 confidence 마스킹 이미지 선택으로 patch 효과 완화 (mitigation)
+  - Model-agnostic: detector 구조 수정 불필요
+
+contributions:
+  - Thermal 정보를 활용한 detection failure 탐지 및 완화 파이프라인 제안
+  - 직접 제작한 물리적 공격 데이터셋으로 정량 평가 수행
+  - 다양한 person detector에 적용 가능한 모델 무관 방식
+
+keywords:
+  - Object Detection
+  - Person Detection
+  - Thermal-RGB Fusion
+  - Physical-World Computer Vision
+  - Detection Confidence Analysis
+  - Selective Search Segmentation
+
+technical_skills:
+  - Thermal-RGB multimodal fusion
+  - Selective search segmentation
+  - Object detection (YOLO 계열)
+  - Physical-world CV dataset construction
+  - Detection confidence evaluation
+  - PyTorch, OpenCV
+
+relation_to_phd:
+  - Object detection / person detection 파이프라인 구현 경험
+  - Thermal-RGB multimodal sensing 및 fusion 경험
+  - Physical-world CV dataset construction 및 정량 평가 경험
+  - Adversarial attack 자체는 주 관심사가 아니며, 지원 맥락에서는 CV 구현 경험으로만 보조적으로 사용

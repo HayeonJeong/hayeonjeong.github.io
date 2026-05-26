@@ -1,0 +1,35 @@
+name: "정하연"
+
+current_research:
+  project: "Bagel-VectorField"
+  description: >
+    Bagel 7B unified multimodal generation model에서
+    Sparse Autoencoders(SAEs)를 활용한 modality-selective concept unlearning 연구.
+    SAE를 Bagel의 transformer residual stream에 부착하여
+    특정 개념(예: Van Gogh 스타일)의 이미지 생성만 선택적으로 억제하면서
+    언어 이해 능력은 보존하는 것이 목표.
+  keywords:
+    - Sparse Autoencoders
+    - Concept Unlearning
+    - Multimodal Generation
+    - Mechanistic Interpretability
+    - Modality-Selective Suppression
+  technical_skills:
+    - SAE training on transformer residual streams
+    - Contrastive pair construction for concept specificity
+    - Diagnostic plotting (image_ratio distribution, activation scatter)
+    - PyTorch, Hugging Face Transformers
+
+research_interests:
+  - Mechanistic Interpretability
+  - Multimodal AI Safety
+  - Representation Learning
+  - Diffusion Models
+  - LLM Alignment & Safety
+  - Concept Editing / Unlearning
+
+motivation_scenarios:
+  - Safety/harmful content moderation
+  - Copyright protection in generative AI
+  - Privacy/deepfake prevention
+  - Regulatory compliance for AI systems

@@ -1,0 +1,60 @@
+project: "Dominant-vs-Dominated: Concept-Level Generative Collapse in Diffusion Models"
+venue: "ECCV 2026 (under review, Submission #7607)"
+status: "Under Review"
+role: "Author (affiliation anonymous)"
+
+description: >
+  Text-to-image diffusion model의 multi-concept generation에서 한 개념이 다른 개념을
+  지배(suppress)하는 현상인 Dominant-vs-Dominated(DvD) imbalance를 체계적으로 연구.
+  DominanceBench(300개 two-concept prompt 벤치마크)를 구축하고, controlled fine-tuning
+  실험으로 개념별 학습 이미지의 시각적 다양성(visual homogeneity)이 dominance의
+  인과적 요인임을 증명. Cross-attention 분석 및 head ablation으로 dominance의
+  내부 메커니즘을 규명.
+
+problem:
+  - Multi-concept 생성 시 dominant concept이 output을 점령하고 dominated concept은 거의 등장 안 함
+  - 기존 연구는 memorization이나 compositional 개선에 초점, DvD는 미탐구 영역
+  - DvD의 원인(데이터) 및 내부 메커니즘(attention)이 불분명
+
+method:
+  - DominanceBench: 강한 DvD 현상을 보이는 300개 two-concept prompt 벤치마크 구축
+  - Controlled fine-tuning: 시각적 다양성을 체계적으로 조절하며 새 concept 학습 → dominance와의 인과관계 확인
+  - Cross-attention 분석: dominant token이 early denoising step의 낮은 해상도 레이어에서 attention 집중
+  - Head ablation: dominance가 특정 head가 아닌 distributed cooperation에서 발생함을 확인
+
+key_findings:
+  - Visual homogeneity(낮은 다양성)로 학습된 concept일수록 dominance 강도 증가 (단조증가)
+  - Dominant token은 early timestep의 lower-spatial-resolution UNet layer에서 attention 집중
+  - Dominated concept은 early denoising phase에서 attention이 급격히 감소
+  - DvD는 memorization(특정 head에 집중)과 달리 여러 head에 분산된 협력에서 발생
+
+contributions:
+  - DvD 현상 정의 및 DominanceBench 벤치마크 구축 (출판 시 공개 예정)
+  - Controlled fine-tuning으로 visual homogeneity → dominance의 인과관계 증명
+  - Cross-attention + head ablation으로 DvD의 where(layer), when(timestep), how(distributed) 규명
+
+keywords:
+  - Text-to-Image Generation
+  - Multi-Concept Generation
+  - Diffusion Models
+  - Concept Dominance
+  - Cross-Attention Analysis
+  - Mechanistic Analysis
+  - Generative Collapse
+  - DominanceBench
+  - Visual Homogeneity
+
+technical_skills:
+  - Diffusion model fine-tuning (concept learning)
+  - Cross-attention analysis in U-Net
+  - Attention head ablation
+  - Benchmark construction & evaluation
+  - Stable Diffusion (v1.4, v2.1)
+  - PyTorch, Hugging Face Diffusers
+
+relation_to_phd:
+  - Diffusion model 내부 메커니즘(mechanistic interpretability) 연구 직접 경험
+  - Cross-attention 분석 및 head ablation 방법론 숙달
+  - Multi-concept generation의 failure mode 체계적 연구
+  - Concept-level 제어 및 억제(suppression) 메커니즘 이해 → concept unlearning과 직결
+  - 벤치마크 구축 및 정량 평가 설계 경험

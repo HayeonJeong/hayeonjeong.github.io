@@ -9,8 +9,8 @@ last_name: Jeong
 contact_note: >
   Email (hayeon.jeong@yonsei.ac.kr) is the best way to reach me.
 description: >
-  Hayeon Jeong — MS Student at Yonsei University (MCML Group). Research interests: diffusion models, generative collapse, adversarial robustness.
-keywords: machine learning, diffusion models, computer vision, Yonsei University, MCML
+  Hayeon Jeong — MS Student at Yonsei University (MCML Group) and Visiting Graduate Researcher at UCLA. Research interests: diffusion models, image reward models, multi-modal models, AI safety, trustworthy AI, robustness.
+keywords: machine learning, diffusion models, image reward models, multi-modal models, AI safety, trustworthy AI, robustness, computer vision, Yonsei University, MCML, UCLA
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -641,6 +641,7 @@ jekyll_get_json:
 
 jsonresume:
   - basics
+  - research interests
   - work
   - research experience
   - education

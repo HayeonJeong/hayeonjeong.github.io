@@ -6,7 +6,7 @@
     "email": "hayeon.jeong@yonsei.ac.kr",
     "phone": "",
     "url": "https://hayeonjeong.github.io/",
-    "summary": "I am an MS student in the Multimedia Computing & Machine Learning (MCML) group at Yonsei University, advised by Prof. Jong-Seok Lee. My research interests include Diffusion Models, Unfied Multi-Modal Models in Computer Vision.",
+    "summary": "I am an MS student in the Multimedia Computing & Machine Learning (MCML) group at Yonsei University, advised by Prof. Jong-Seok Lee, and a six-month Visiting Graduate Researcher at the Computational Machine Learning Lab, UCLA, advised by Prof. Cho-Jui Hsieh. My research interests center on diffusion models and image reward models, multi-modal models, and AI safety, trustworthy AI, and robustness.",
     "location": {
       "address": "Seoul, Republic of Korea",
       "postalCode": "",
@@ -22,6 +22,23 @@
       }
     ]
   },
+  "research interests": [
+    {
+      "name": "Diffusion Models & Image Reward Models",
+      "summary": "Post-training, reward modeling, and evaluation for text-to-image generation.",
+      "keywords": []
+    },
+    {
+      "name": "Multi-Modal Models",
+      "summary": "Vision-language and unified multi-modal modeling for reliable perception and generation.",
+      "keywords": []
+    },
+    {
+      "name": "AI Safety, Trustworthy AI, and Robustness",
+      "summary": "Robustness, failure analysis, and trustworthy behavior in modern AI systems.",
+      "keywords": []
+    }
+  ],
   "education": [
     {
       "institution": "Yonsei University",
@@ -57,6 +74,15 @@
   ],
   "research experience": [
     {
+      "name": "Computational Machine Learning Lab, UCLA",
+      "position": "Visiting Graduate Researcher",
+      "url": "",
+      "startDate": "2026-05-01",
+      "endDate": "2026-10-31",
+      "summary": "Six-month visiting researcher advised by Prof. Cho-Jui Hsieh.",
+      "highlights": []
+    },
+    {
       "name": "Multimedia Computing & Machine Learning (MCML) Group",
       "position": "M.S. Student",
       "url": "https://mcml.yonsei.ac.kr/",
@@ -66,7 +92,7 @@
       "highlights": []
     },
     {
-      "name": "AI Safety Center",
+      "name": "AI Safety Center @ Soongsil University",
       "position": "Undergraduate Research Intern",
       "url": "https://aisc.ssu.ac.kr/",
       "startDate": "2023-06-01",
