@@ -33,7 +33,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an MS student in the **Multimedia Computing & Machine Learning (MCML)** group at Yonsei University, advised by [Prof. Jong-Seok Lee](https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en). I am currently a six-month **Visiting Graduate Researcher** at the Computational Machine Learning Lab, UCLA, advised by [Prof. Cho-Jui Hsieh](https://web.cs.ucla.edu/~chohsieh/).
+I am an **MS student** in the **[MCML](https://mcml.yonsei.ac.kr/)** group at Yonsei University, advised by [Prof. Jong-Seok Lee](https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en).
+I am currently a six-month **Visiting Graduate Researcher** at the **[CML Lab](https://web.cs.ucla.edu/~chohsieh/)**, UCLA, advised by [Prof. Cho-Jui Hsieh](https://scholar.google.com/citations?user=Wy89g4IAAAAJ&hl=en).
 
 My research interests lie at the intersection of **Generative AI** and **Trustworthy AI**:
 
@@ -46,6 +47,6 @@ My research interests lie at the intersection of **Generative AI** and **Trustwo
 - **Soongsil University** — Electronic and Information Engineering, B.S. (Mar 2020 – Feb 2025), GPA 4.11/4.5 (Magna Cum Laude)
 
 **Experience**
-- **Visiting Graduate Researcher**, CML Lab, UCLA (May 2026 – Oct 2026; six-month visit), advised by [Prof. Cho-Jui Hsieh](https://web.cs.ucla.edu/~chohsieh/)
-- **MS Student**, [MCML](https://mcml.yonsei.ac.kr), Yonsei University (Mar 2025 – Present)
+- **Visiting Graduate Researcher**, CML Lab, UCLA, advised by [Prof. Cho-Jui Hsieh](https://scholar.google.com/citations?user=Wy89g4IAAAAJ&hl=en) (May 2026 – Oct 2026; six-month visit)
+- **MS Student**, [MCML](https://mcml.yonsei.ac.kr), Yonsei University, advised by [Prof. Jong-Seok Lee](https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en) (Mar 2025 – Present)
 - **Undergraduate Research Intern**, AI Safety Center, Soongsil University (Jun 2023 – Aug 2024)
