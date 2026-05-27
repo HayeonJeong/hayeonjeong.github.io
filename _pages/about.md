@@ -6,7 +6,13 @@ subtitle: MS Student @ <a href="https://www.yonsei.ac.kr" target="_blank">Yonsei
 
 profile:
   align: right
-  image: prof_pic.jpg
+  images:
+    - file: prof_pic.jpg
+      fit: cover
+    - file: prof_pic_2.JPG
+      fit: square
+    - file: prof_pic_3.JPG
+      fit: cover
   image_circular: false
   more_info: >
     <p>hayeon.jeong@yonsei.ac.kr</p>

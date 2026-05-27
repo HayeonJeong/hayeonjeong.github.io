@@ -1,0 +1,40 @@
+{% assign profile = include.profile %}
+{% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+{% if profile.image_circular %}
+  {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+{% endif %}
+{% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3 }}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
+
+{% if profile.images %}
+  {% assign carousel_id = include.id | default: 'profile-carousel' %}
+  <div id="{{ carousel_id }}" class="profile-carousel carousel slide" data-ride="false" data-interval="false">
+    <div class="carousel-inner">
+      {% for profile_image in profile.images %}
+        {% assign image_fit = 'cover' %}
+        {% if profile_image.file %}
+          {% assign image_file = profile_image.file %}
+          {% assign image_alt = profile_image.alt | default: image_file %}
+          {% assign image_fit = profile_image.fit | default: image_fit %}
+        {% else %}
+          {% assign image_file = profile_image %}
+          {% assign image_alt = profile_image %}
+        {% endif %}
+        {% assign profile_image_path = image_file | prepend: 'assets/img/' %}
+        <div class="carousel-item profile-carousel-item--{{ image_fit }}{% if forloop.first %} active{% endif %}">
+          {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=image_alt cache_bust=include.cache_bust %}
+        </div>
+      {% endfor %}
+    </div>
+    {% if profile.images.size > 1 %}
+      <a class="carousel-control-prev" href="#{{ carousel_id }}" role="button" data-slide="prev" aria-label="Previous profile image">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#{{ carousel_id }}" role="button" data-slide="next" aria-label="Next profile image">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+    {% endif %}
+  </div>
+{% elsif profile.image %}
+  {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
+  {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image cache_bust=include.cache_bust %}
+{% endif %}
