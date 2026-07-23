@@ -7,7 +7,7 @@
 
 {% if profile.images %}
   {% assign carousel_id = include.id | default: 'profile-carousel' %}
-  <div id="{{ carousel_id }}" class="profile-carousel carousel slide" data-ride="false" data-interval="false">
+  <div id="{{ carousel_id }}" class="profile-carousel carousel slide" data-interval="false">
     <div class="carousel-inner">
       {% for profile_image in profile.images %}
         {% assign image_fit = 'cover' %}
@@ -26,10 +26,10 @@
       {% endfor %}
     </div>
     {% if profile.images.size > 1 %}
-      <a class="carousel-control-prev" href="#{{ carousel_id }}" role="button" data-slide="prev" aria-label="Previous profile image">
+      <a class="carousel-control-prev" href="#{{ carousel_id }}" role="button" data-target="#{{ carousel_id }}" data-slide="prev" aria-label="Previous profile image">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       </a>
-      <a class="carousel-control-next" href="#{{ carousel_id }}" role="button" data-slide="next" aria-label="Next profile image">
+      <a class="carousel-control-next" href="#{{ carousel_id }}" role="button" data-target="#{{ carousel_id }}" data-slide="next" aria-label="Next profile image">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
       </a>
     {% endif %}
