@@ -14,7 +14,7 @@ github: https://github.com/HayeonJeong/2024_Spring_ANN
     <p>
       <i class="fa-brands fa-github"></i>
       <a href="https://github.com/HayeonJeong/2024_Spring_ANN" target="_blank" rel="noopener noreferrer">Code repository</a>
-      &nbsp;·&nbsp; Artificial Neural Networks course project, Soongsil University (Spring 2024)
+      &nbsp;·&nbsp; Artificial Neural Networks course project, Soongsil University (Mar – Jun 2024)
       &nbsp;·&nbsp; Team of 4 (team lead / experiment &amp; analysis)
     </p>
   </div>

@@ -42,11 +42,11 @@ My research interests lie at the intersection of **Generative AI** and **Trustwo
 - **Trustworthy AI**: mechanistic interpretability, AI safety & reliability, robustness
 
 **Education**
-- **Yonsei University** — School of Integrated Technology, Master's degree (Mar 2025 – Feb 2027)
+- **Yonsei University** — School of Integrated Technology, Master's degree (Mar 2025 – Feb 2027, expected), GPA 4.16/4.30
 - **UC Berkeley** — Visiting Undergraduate Student (Jan 2023 – May 2023)
 - **Soongsil University** — Electronic and Information Engineering, B.S. (Mar 2020 – Feb 2025), GPA 4.11/4.5 (Magna Cum Laude)
 
 **Experience**
-- **Visiting Graduate Researcher**, CML Lab, UCLA, advised by [Prof. Cho-Jui Hsieh](https://scholar.google.com/citations?user=Wy89g4IAAAAJ&hl=en) (May 2026 – Oct 2026; six-month visit)
+- **Visiting Graduate Researcher**, CML Lab, UCLA, advised by [Prof. Cho-Jui Hsieh](https://scholar.google.com/citations?user=Wy89g4IAAAAJ&hl=en) (May 2026 – Oct 2026, expected; six-month visit)
 - **MS Student**, [MCML](https://mcml.yonsei.ac.kr), Yonsei University, advised by [Prof. Jong-Seok Lee](https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en) (Mar 2025 – Present)
 - **Undergraduate Research Intern**, AI Security Lab, Soongsil University, advised by Prof. Daeseon Choi (Jun 2023 – Aug 2024)

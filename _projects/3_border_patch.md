@@ -15,7 +15,7 @@ related_publications: false
       <a href="{{ '/assets/pdf/border_conditions_adversarial_patch.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
         Paper (original submission version)
       </a>
-      &nbsp;·&nbsp; Undergraduate thesis, Soongsil University
+      &nbsp;·&nbsp; Undergraduate graduation research, Soongsil University (Jan – Oct 2024)
       &nbsp;·&nbsp; <strong>Best Paper Award (2nd Place)</strong>, Undergraduate Thesis Competition
     </p>
     <p style="font-size: 0.9rem; color: gray;">

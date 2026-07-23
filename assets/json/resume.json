@@ -6,7 +6,7 @@
     "email": "hayeon.jeong@yonsei.ac.kr",
     "phone": "",
     "url": "https://hayeonjeong.github.io/",
-    "summary": "I am an MS student in the Multimedia Computing & Machine Learning (MCML) group at Yonsei University, advised by Prof. Jong-Seok Lee, and a six-month Visiting Graduate Researcher at the Computational Machine Learning Lab, UCLA, advised by <a href=\"https://web.cs.ucla.edu/~chohsieh/\">Prof. Cho-Jui Hsieh</a>. My research interests span generative models (text-to-image diffusion), reinforcement learning for generation, mechanistic interpretability, and AI safety & reliability.",
+    "summary": "I am an MS student in the Multimedia Computing & Machine Learning (MCML) group at Yonsei University, advised by <a href=\"https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en\">Prof. Jong-Seok Lee</a>, and a six-month Visiting Graduate Researcher at the Computational Machine Learning Lab, UCLA, advised by <a href=\"https://web.cs.ucla.edu/~chohsieh/\">Prof. Cho-Jui Hsieh</a>. My research interests span generative models (text-to-image diffusion), reinforcement learning for generation, mechanistic interpretability, and AI safety & reliability.",
     "location": {
       "address": "Seoul, Republic of Korea",
       "postalCode": "",
@@ -97,7 +97,7 @@
       "url": "https://mcml.yonsei.ac.kr/",
       "startDate": "2025-03-01",
       "endDate": "Present",
-      "summary": "Advised by Prof. Jong-Seok Lee. Concept-level generative collapse in diffusion models (under review, first author).",
+      "summary": "Advised by <a href=\"https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en\">Prof. Jong-Seok Lee</a>. Concept-level generative collapse in diffusion models (under review, first author).",
       "highlights": []
     },
     {
@@ -114,7 +114,7 @@
     {
       "name": "Dominating vs. Dominated: Concept-Level Generative Collapse in Diffusion Models",
       "authors": "Hayeon Jeong, Jong-Seok Lee",
-      "publisher": "ACCV 2026 (under review); arXiv preprint",
+      "publisher": "Under review; arXiv preprint",
       "releaseDate": "2025-12-19",
       "url": "https://arxiv.org/abs/2512.20666",
       "summary": "We identify and analyze the Dominant-vs-Dominated (DvD) imbalance in text-to-image diffusion models, where one concept suppresses others in multi-concept generation. Through a systematic benchmark and attention-level analysis, we show that this behavior arises from limited data diversity and distributed cross-attention mechanisms, providing insights toward more reliable and controllable image generation."
@@ -135,6 +135,20 @@
       "startDate": "2025-09-01",
       "endDate": "2025-12-31",
       "url": "https://drive.google.com/file/d/1kqZbzpuM9qS_IGhl1S0CaLlf8Dck-QxD/view?usp=sharing"
+    },
+    {
+      "name": "Border Conditions in Adversarial Patch Attacks (Undergraduate Graduation Research)",
+      "summary": "Analyzed how patch borders and interpolation change the attack success rate of adversarial patches on object detectors, showing the patch application process — not just generation — materially affects attack performance. Best Paper Award (2nd Place), Undergraduate Thesis Competition.",
+      "startDate": "2024-01-01",
+      "endDate": "2024-10-31",
+      "url": "https://hayeonjeong.github.io/projects/3_border_patch/"
+    },
+    {
+      "name": "Lightweight DenseNet for EMNIST",
+      "summary": "Designed a compact DenseNet variant that beats ResNet-50 accuracy on EMNIST (90.72%) with roughly 10x fewer parameters and ~2x faster inference. Team of 4 (team lead).",
+      "startDate": "2024-03-01",
+      "endDate": "2024-06-30",
+      "url": "https://github.com/HayeonJeong/2024_Spring_ANN"
     }
   ],
   "honors and awards": [
@@ -228,7 +242,7 @@
     },
     {
       "language": "English",
-      "fluency": "Fluent (TOEFL iBT ≈ 90)",
+      "fluency": "Updated TOEFL iBT 4.5 (≈ 90 for old ver)",
       "icon": ""
     }
   ],
