@@ -7,6 +7,21 @@ importance: 2
 category: 2024
 related_publications: false
 github: https://github.com/HayeonJeong/2024_Spring_ANN
+_styles: >
+  .post article table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: 1px solid var(--global-divider-color);
+  }
+  .post article table th,
+  .post article table td {
+    border: 1px solid var(--global-divider-color);
+    padding: 0.4rem 0.75rem;
+  }
+  .post article table thead th {
+    border-bottom: 2px solid var(--global-divider-color);
+  }
 ---
 
 <div class="row justify-content-center">

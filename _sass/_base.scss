@@ -792,25 +792,6 @@ footer.sticky-bottom {
   }
 }
 
-// Content tables (project/page bodies): centered with visible borders
-
-.post article table {
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: collapse;
-  border: 1px solid var(--global-divider-color);
-
-  th,
-  td {
-    border: 1px solid var(--global-divider-color);
-    padding: 0.4rem 0.75rem;
-  }
-
-  thead th {
-    border-bottom: 2px solid var(--global-divider-color);
-  }
-}
-
 // Publications
 
 .publications {
