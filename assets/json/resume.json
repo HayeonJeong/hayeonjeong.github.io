@@ -6,7 +6,7 @@
     "email": "hayeon.jeong@yonsei.ac.kr",
     "phone": "",
     "url": "https://hayeonjeong.github.io/",
-    "summary": "I am an MS student in the Multimedia Computing & Machine Learning (MCML) group at Yonsei University, advised by Prof. Jong-Seok Lee, and a six-month Visiting Graduate Researcher at the Computational Machine Learning Lab, UCLA, advised by <a href=\"https://web.cs.ucla.edu/~chohsieh/\">Prof. Cho-Jui Hsieh</a>. My research interests center on diffusion models and image reward models, multi-modal models, and AI safety, trustworthy AI, and robustness.",
+    "summary": "I am an MS student in the Multimedia Computing & Machine Learning (MCML) group at Yonsei University, advised by Prof. Jong-Seok Lee, and a six-month Visiting Graduate Researcher at the Computational Machine Learning Lab, UCLA, advised by <a href=\"https://web.cs.ucla.edu/~chohsieh/\">Prof. Cho-Jui Hsieh</a>. My research interests span generative models (text-to-image diffusion), reinforcement learning for generation, mechanistic interpretability, and AI safety & reliability.",
     "location": {
       "address": "Seoul, Republic of Korea",
       "postalCode": "",
@@ -24,17 +24,22 @@
   },
   "research interests": [
     {
-      "name": "Diffusion Models & Image Reward Models",
-      "summary": "Post-training, reward modeling, and evaluation for text-to-image generation.",
+      "name": "Generative Models (T2I Diffusion)",
+      "summary": "Text-to-image diffusion: post-training, reward modeling, and evaluation.",
       "keywords": []
     },
     {
-      "name": "Multi-Modal Models",
-      "summary": "Vision-language and unified multi-modal modeling for reliable perception and generation.",
+      "name": "RL for Generation",
+      "summary": "Reinforcement post-training to better align generative models with prompt requirements.",
       "keywords": []
     },
     {
-      "name": "AI Safety, Trustworthy AI, and Robustness",
+      "name": "Mechanistic Interpretability",
+      "summary": "Understanding the internal mechanisms (e.g., cross-attention) behind generative behavior.",
+      "keywords": []
+    },
+    {
+      "name": "AI Safety & Reliability",
       "summary": "Robustness, failure analysis, and trustworthy behavior in modern AI systems.",
       "keywords": []
     }
@@ -48,17 +53,21 @@
       "studyType": "Master of Science",
       "startDate": "2025-03-01",
       "endDate": "2027-02-01",
-      "score": "4.0/4.0",
-      "summary": "4.0/4.0 GPA"
+      "score": "4.16/4.30",
+      "summary": "4.16/4.30 GPA"
     },
     {
       "institution": "University of California, Berkeley",
       "location": "Berkeley, United States",
       "url": "https://www.berkeley.edu/",
-      "studyType": "Visiting Student",
+      "studyType": "Visiting Undergraduate Student",
       "startDate": "2023-01-10",
       "endDate": "2023-05-12",
-      "courses": []
+      "courses": [
+        "CS61A: Structure and Interpretation of Computer Programs",
+        "CS61B: Data Structures",
+        "Physics 77: Computational Techniques in Physics"
+      ]
     },
     {
       "institution": "Soongsil University",
@@ -68,8 +77,8 @@
       "studyType": "Bachelor of Science",
       "startDate": "2020-03-03",
       "endDate": "2025-02-21",
-      "score": "4.11/4.5 (Magna Cum Laude)",
-      "summary": "4.1/4.5 GPA (Magna Cum Laude)"
+      "score": "4.11/4.5 (major 4.09/4.5), Magna Cum Laude",
+      "summary": "4.11/4.5 GPA (Magna Cum Laude)"
     }
   ],
   "research experience": [
@@ -79,33 +88,33 @@
       "url": "",
       "startDate": "2026-05-01",
       "endDate": "2026-10-31",
-      "summary": "Six-month visiting researcher advised by <a href=\"https://web.cs.ucla.edu/~chohsieh/\">Prof. Cho-Jui Hsieh</a>.",
+      "summary": "Advised by <a href=\"https://web.cs.ucla.edu/~chohsieh/\">Prof. Cho-Jui Hsieh</a>. Flip-GRPO: constraint-level counterfactual pairs for reinforcement post-training of text-to-image models (ongoing).",
       "highlights": []
     },
     {
-      "name": "Multimedia Computing & Machine Learning (MCML) Group",
-      "position": "M.S. Student",
+      "name": "Multimedia Computing & Machine Learning (MCML) Group, Yonsei University",
+      "position": "M.S. Researcher",
       "url": "https://mcml.yonsei.ac.kr/",
       "startDate": "2025-03-01",
       "endDate": "Present",
-      "summary": "",
+      "summary": "Advised by Prof. Jong-Seok Lee. Concept-level generative collapse in diffusion models (under review, first author).",
       "highlights": []
     },
     {
-      "name": "AI Safety Center, Soongsil University",
+      "name": "AI Security Lab, Soongsil University",
       "position": "Undergraduate Research Intern",
       "url": "https://aisc.ssu.ac.kr/",
       "startDate": "2023-06-01",
       "endDate": "2024-08-31",
-      "summary": "",
+      "summary": "Advised by Prof. Daeseon Choi. Thermal–RGB multimodal person-detection defense (AVSS 2025); generative backup against storage-encryption attacks; privacy-assistant framework using small LLMs (Best Paper Award).",
       "highlights": []
     }
   ],
   "publications": [
     {
-      "name": "Dominating vs. Dominated: Generative Collapse in Diffusion Models",
+      "name": "Dominating vs. Dominated: Concept-Level Generative Collapse in Diffusion Models",
       "authors": "Hayeon Jeong, Jong-Seok Lee",
-      "publisher": "arXiv",
+      "publisher": "ACCV 2026 (under review); arXiv preprint",
       "releaseDate": "2025-12-19",
       "url": "https://arxiv.org/abs/2512.20666",
       "summary": "We identify and analyze the Dominant-vs-Dominated (DvD) imbalance in text-to-image diffusion models, where one concept suppresses others in multi-concept generation. Through a systematic benchmark and attention-level analysis, we show that this behavior arises from limited data diversity and distributed cross-attention mechanisms, providing insights toward more reliable and controllable image generation."
@@ -130,48 +139,85 @@
   ],
   "honors and awards": [
     {
-      "title": "Best Paper Award (KISA President)",
+      "title": "Best Paper Award (KISA President's Award)",
       "date": "2024",
-      "awarder": "KIISC Chungcheong Chapter Conference",
+      "awarder": "KIISC Chungcheong Conference",
       "summary": ""
     },
     {
-      "title": "Professor’s Scholarship (Half Tuition)",
+      "title": "Professor's Scholarship (25% Tuition, Merit-based)",
       "date": "2024",
       "awarder": "School of Electronic Engineering, Soongsil University",
       "summary": ""
     },
     {
-      "title": "Verity Award – Professor’s Scholarship (Quarter Tuition)",
+      "title": "Truth Award – Professor's Scholarship (50% Tuition, Merit-based)",
       "date": "2024",
       "awarder": "Soongsil University",
       "summary": ""
     },
     {
-      "title": "Academic Achievement Scholarship (Quarter Tuition)",
+      "title": "Professor's Scholarship (25% Tuition, Merit-based)",
       "date": "2021",
       "awarder": "School of Electronic Engineering, Soongsil University",
       "summary": ""
     }
   ],
+  "teaching and service": [
+    {
+      "title": "Reviewer, IEEE ICASSP 2026",
+      "startDate": "2025-10-01",
+      "endDate": "2025-12-31",
+      "summary": ""
+    },
+    {
+      "title": "Teaching Assistant, Advanced Engineering Mathematics, Yonsei University",
+      "startDate": "2025-03-01",
+      "endDate": "2025-06-30",
+      "summary": "Spring 2025."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "icon": "fa-solid fa-code",
+      "keywords": ["Python", "Java", "C/C++"]
+    },
+    {
+      "name": "Frameworks",
+      "icon": "fa-solid fa-layer-group",
+      "keywords": ["PyTorch", "Hugging Face (Diffusers/Transformers)"]
+    },
+    {
+      "name": "Tools",
+      "icon": "fa-solid fa-toolbox",
+      "keywords": ["Git", "LaTeX"]
+    }
+  ],
   "other experience": [
     {
-      "title": "Data labeling assistant",
-      "startDate": "2023-07-01",
-      "endDate": "2023-09-30",
-      "summary": "Data labeling assistant for OCR processing service optimization (mathematical equations)."
+      "title": "Trainee, SK Hynix Semiconductor Curriculum 2.0 (SUNI × SK hynix)",
+      "startDate": "2023-09-01",
+      "endDate": "2023-12-31",
+      "summary": "Completed coursework on the semiconductor market, memory devices (DRAM, NAND), CIS, and future semiconductor trends."
+    },
+    {
+      "title": "Data Annotator, AI Training Data Construction Project (Univa)",
+      "startDate": "2022-07-01",
+      "endDate": "2022-09-30",
+      "summary": "Annotated mathematical-equation images to build supervised training data for an OCR recognition model."
     },
     {
       "title": "KT Mentoring Program Mentor",
       "startDate": "2020-10-01",
       "endDate": "2022-03-31",
-      "summary": "Developed 6-month Math/English curriculum."
+      "summary": "Developed a 6-month Math/English curriculum for mentees."
     },
     {
       "title": "Baird Volunteer Corps Member, Soongsil University",
       "startDate": "2020-10-01",
       "endDate": "2022-02-28",
-      "summary": "Contributed to community safety through CCTV installation project with local police station; youth education volunteer programs."
+      "summary": "Contributed to community safety through a CCTV installation project with the local police station; youth education volunteer programs."
     }
   ],
   "languages": [
@@ -182,7 +228,7 @@
     },
     {
       "language": "English",
-      "fluency": "Fluent",
+      "fluency": "Fluent (TOEFL iBT ≈ 90)",
       "icon": ""
     }
   ],
@@ -208,7 +254,7 @@
     {
       "name": "Jong-Seok Lee",
       "icon": "fa-solid fa-user-graduate",
-      "reference": "Jong-Seok Lee is a professor of School of Integrated Technology at Yonsei University. He is a co-author of the paper 'Dominating vs. Dominated: Generative Collapse in Diffusion Models'."
+      "reference": "Jong-Seok Lee is a professor of School of Integrated Technology at Yonsei University. He is a co-author of the paper 'Dominating vs. Dominated: Concept-Level Generative Collapse in Diffusion Models'."
     }
   ]
 }
