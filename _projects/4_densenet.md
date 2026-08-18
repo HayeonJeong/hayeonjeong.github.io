@@ -27,10 +27,12 @@ _styles: >
 <div class="row justify-content-center">
   <div class="col-sm-10">
     <p>
+      Artificial Neural Networks course project, Soongsil University (Mar – Jun 2024)<br />
+      Team of 4 (team lead / experiment &amp; analysis)
+    </p>
+    <p>
       <i class="fa-brands fa-github"></i>
       <a href="https://github.com/HayeonJeong/2024_Spring_ANN" target="_blank" rel="noopener noreferrer">Code repository</a>
-      &nbsp;·&nbsp; Artificial Neural Networks course project, Soongsil University (Mar – Jun 2024)
-      &nbsp;·&nbsp; Team of 4 (team lead / experiment &amp; analysis)
     </p>
   </div>
 </div>

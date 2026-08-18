@@ -26,17 +26,19 @@ _styles: >
 <div class="row justify-content-center">
   <div class="col-sm-10">
     <p>
+      Undergraduate graduation research, Soongsil University (Jan – Oct 2024)<br />
+      <strong>Best Paper Award (2nd Place)</strong>, Undergraduate Thesis Competition
+    </p>
+    <p>
       <i class="fa-solid fa-file-pdf"></i>
       <a href="{{ '/assets/pdf/border_conditions_adversarial_patch_en.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
         Paper (English)
       </a>
-      &nbsp;·&nbsp;
+      &nbsp;&nbsp;
       <i class="fa-solid fa-file-pdf"></i>
       <a href="{{ '/assets/pdf/border_conditions_adversarial_patch_kr.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
         Thesis (Korean)
       </a>
-      &nbsp;·&nbsp; Undergraduate graduation research, Soongsil University (Jan – Oct 2024)
-      &nbsp;·&nbsp; <strong>Best Paper Award (2nd Place)</strong>, Undergraduate Thesis Competition
     </p>
   </div>
 </div>
