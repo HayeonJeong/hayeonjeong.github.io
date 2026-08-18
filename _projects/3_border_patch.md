@@ -27,14 +27,16 @@ _styles: >
   <div class="col-sm-10">
     <p>
       <i class="fa-solid fa-file-pdf"></i>
-      <a href="{{ '/assets/pdf/border_conditions_adversarial_patch.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
-        Paper (original submission version)
+      <a href="{{ '/assets/pdf/border_conditions_adversarial_patch_en.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+        Paper (English)
+      </a>
+      &nbsp;·&nbsp;
+      <i class="fa-solid fa-file-pdf"></i>
+      <a href="{{ '/assets/pdf/border_conditions_adversarial_patch_kr.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+        Thesis (Korean)
       </a>
       &nbsp;·&nbsp; Undergraduate graduation research, Soongsil University (Jan – Oct 2024)
       &nbsp;·&nbsp; <strong>Best Paper Award (2nd Place)</strong>, Undergraduate Thesis Competition
-    </p>
-    <p style="font-size: 0.9rem; color: gray;">
-      Note: the attached PDF is the anonymized submission version; venue and author information will be updated in a later revision.
     </p>
   </div>
 </div>
