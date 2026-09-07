@@ -7,6 +7,20 @@ img: assets/img/projects/1_phonetic/phonetic_thumnail.png
 importance: 1
 category: 2025
 related_publications: false
+_styles: >
+  .post article table {
+    margin: 0.5rem auto 1.75rem auto;
+    border-collapse: collapse;
+    border: 1px solid var(--global-divider-color);
+  }
+  .post article table th,
+  .post article table td {
+    border: 1px solid var(--global-divider-color);
+    padding: 0.4rem 0.75rem;
+  }
+  .post article table thead th {
+    border-bottom: 2px solid var(--global-divider-color);
+  }
 ---
 
 ## Overview
