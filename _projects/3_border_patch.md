@@ -55,11 +55,11 @@ This study analyzes how various *border conditions* affect the attack success ra
 
 ## Motivation
 
-Prior work on adversarial patches has focused on making patches **smaller** or **less noticeable**, adjusting patch characteristics through loss functions and transformations to raise the ASR. What has *not* been studied is the boundary between the background image and the patch — the pixels and **borders** created when a patch is actually applied to an image.
+Prior work on adversarial patches has focused on making patches **smaller** or **less noticeable**, adjusting patch characteristics through loss functions and transformations to raise the ASR. What has *not* been studied is the boundary between the background image and the patch, that is, the pixels and **borders** created when a patch is actually applied to an image.
 
 Existing studies are inconsistent here: some add borders, some do not, and physical patches are often displayed with wide black or white borders (e.g., patches shown on an LCD screen, or printed with a visible frame). Because adversarial patches optimize individual pixels in fine detail, an inconsistent border can actually make the patched object *easier* to detect, lowering the ASR and hurting reproducibility.
 
-> **Our objective:** analyze how the presence, color, and thickness of borders — as well as the interpolation method used during application — affect the ASR, and show that the application process itself is a critical factor in attack effectiveness.
+> **Our objective:** analyze how the presence, color, and thickness of borders, as well as the interpolation method used during application, affect the ASR, and show that the application process itself is a critical factor in attack effectiveness.
 
 **Contributions.**
 
@@ -80,7 +80,7 @@ We systematically vary the conditions that an attacker can set as hyper-paramete
 
 **Patch sizes and ratios.** The initial patch size (in pixels) determines how much color and shape the patch can express; the application ratio is the fraction of the object the patch covers. Larger ratios generally raise the ASR, so we test with and without borders across sizes and ratios.
 
-**Border thickness and color.** We vary thickness (kept small relative to the patch so the border is less prominent than the patch itself) and color (black, white, gray — colors close to typical patch colors).
+**Border thickness and color.** We vary thickness (kept small relative to the patch so the border is less prominent than the patch itself) and color (black, white, and gray, which are close to typical patch colors).
 
 <div class="row justify-content-center">
   <div class="col-sm-8 mt-3">
@@ -95,13 +95,13 @@ Patch applications for a 256×256 patch under three border colors (white / gray 
 
 ## Experiment Design
 
-We attack **human objects** in a digital environment — i.e., we assume a person is holding an adversarial patch.
+We attack **human objects** in a digital environment, i.e., we assume a person is holding an adversarial patch.
 
 **Datasets & detector.** We use MS-COCO (the *person* class, ~5k validation images) and the INRIA Person dataset (614 train / 288 test), and we attack two **YOLOv5** detectors, one trained on COCO-person and one on INRIA.
 
 **Attacks.**
 
-- **Hiding attacks** prevent the detector from finding the person. We generate four hiding patches — `COCO_COCO`, `INRIA_COCO`, `INRIA_INRIA`, `COCO_INRIA` (named *train_attack*) — starting from a gray patch and combining saliency, total-variation (TV), non-printability (NPS), and objectness losses (weights 1.0 / 2.5 / 0.1 / 3.0).
+- **Hiding attacks** prevent the detector from finding the person. We generate four hiding patches (`COCO_COCO`, `INRIA_COCO`, `INRIA_INRIA`, `COCO_INRIA`, named *train_attack*), starting from a gray patch and combining saliency, total-variation (TV), non-printability (NPS), and objectness losses (weights 1.0 / 2.5 / 0.1 / 3.0).
 - **Altering attacks** make the person be recognized as another class (e.g., teddy bear, kite, traffic light). We use untargeted altering patches, choosing the lowest-confidence target class each epoch.
 
 <div class="row align-items-center">
@@ -129,7 +129,7 @@ $$
 
 ### 1. Interpolation method
 
-Bicubic (and bilinear) interpolation applies the patch **with a black border**; nearest-neighbor applies it **without** one. Across all four hiding patches, **bicubic gives a higher ASR** — up to a **2.4%** gap (e.g., 75.3% → 77.7% for `INRIA_INRIA` at ratio 0.2). Even small pixel changes from interpolation measurably affect the ASR, so **adding a thin black border can strengthen the patch.**
+Bicubic (and bilinear) interpolation applies the patch **with a black border**; nearest-neighbor applies it **without** one. Across all four hiding patches, **bicubic gives a higher ASR**, up to a **2.4%** gap (e.g., 75.3% → 77.7% for `INRIA_INRIA` at ratio 0.2). Even small pixel changes from interpolation measurably affect the ASR, so **adding a thin black border can strengthen the patch.**
 
 | Patch (256×256, ratio 0.2) | Bicubic (with border) | Nearest (no border) |
 | --- | ---: | ---: |
@@ -153,7 +153,7 @@ The best border color depends on the **dataset the patch was trained on**:
 - `INRIA_COCO` (trained on COCO): **white** borders raised the ASR most (max **+9.8%**, mean +4.5%); black borders were neutral or worse.
 - `INRIA_INRIA` (trained on INRIA): **gray** borders helped most (max **+4.9%**, mean +1.5%); white tended to hurt.
 
-Because each patch is optimized to blend into its own training data, the border color that best matches the dataset's color characteristics maximizes the attack.
+Because each patch is optimized on its own training data, the border color that best matches that dataset's color statistics maximizes the attack.
 
 <div class="row justify-content-center">
   <div class="col-sm-10 mt-3">
@@ -168,6 +168,6 @@ Hiding-attack results for an <code>INRIA_INRIA</code> patch under different bord
 
 ## Conclusion
 
-This project addressed the often-overlooked issue of **patch borders** in adversarial-patch research and showed that the *application process* — not just patch generation — materially affects attack performance. Bicubic interpolation increases the ASR; patch size is unrelated to the border effect, while borders generally help at application ratios of 0.1–0.3; border thickness has no single trend, but a gray 4–8 px border is a strong default; and the optimal border color depends on the training dataset. These results give practical guidance for building stronger patches — and, in turn, for hardening object detectors against them.
+This project addressed the often-overlooked issue of **patch borders** in adversarial-patch research and showed that the *application process*, not just patch generation, materially affects attack performance. Bicubic interpolation increases the ASR; patch size is unrelated to the border effect, while borders generally help at application ratios of 0.1–0.3; border thickness has no single trend, but a gray 4–8 px border is a reliable default; and the optimal border color depends on the training dataset. These results give practical guidance for building stronger patches and, in turn, for hardening object detectors against them.
 
 *Future work:* validate these strategies across more datasets, detectors, and physical-world conditions.

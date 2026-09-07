@@ -9,7 +9,7 @@ category: 2025
 related_publications: false
 ---
 
-## Project Snapshot
+## Overview
 
 This project studies why a strong pre-trained ASR model can still fail on **non-native Korean speech**. The motivating issue is not only data scarcity. L2 speakers often realize Korean sounds through the phonetic categories of their first language, so the acoustic signal may no longer align cleanly with the standard Korean phoneme that the recognizer expects [[1](#ref-1), [2](#ref-2)].
 
@@ -52,13 +52,13 @@ Figure 1: Initial phonetic-aware encoder tuning framework with LoRA and auxiliar
 
 The first experiments did more than reduce CER. They also suggested that the encoder was changing *where* it placed confidence over time. In forced-alignment style analysis, the baseline produced diffused phonetic probabilities, while the phonetic-aware model produced sharper peaks near the expected phoneme locations [[9](#ref-9)].
 
-That was a useful sign, but it also raised a new question: if the CTC target is too symbol-like, does the model become overly eager to force uncertain learner speech into a single clean phoneme category?
+That was a useful sign, but it also raised a new question: if the CTC target is too symbol-like, does the model become too inclined to assign uncertain learner speech to a single clean phoneme category?
 
 This is where the project shifted from “phoneme-level supervision improves ASR” to a more careful question:
 
-> Can the encoder use the remaining valid acoustic cues in learner speech, instead of simply snapping every ambiguous sound to one phoneme label?
+> Can the encoder use the remaining valid acoustic cues in learner speech, instead of simply assigning every ambiguous sound to one phoneme label?
 
-Layer-wise experiments also pushed me in this direction. Late-layer CTC was not always stable, and middle layers sometimes looked more useful for Jamo-CER than final layers. This matches a broader pattern in speech representation analysis: acoustic, phonetic, and word-level information are not uniformly distributed across layers [[10](#ref-10), [11](#ref-11)].
+Layer-wise experiments also supported this direction. Late-layer CTC was not always stable, and middle layers sometimes looked more useful for Jamo-CER than final layers. This matches a broader pattern in speech representation analysis: acoustic, phonetic, and word-level information are not uniformly distributed across layers [[10](#ref-10), [11](#ref-11)].
 
 ---
 
@@ -98,7 +98,7 @@ This reframes the analysis too. A normal confusion matrix says “the model conf
 
 ## Layer Hypothesis
 
-The current experiment also assigns feature heads to different encoder layers instead of always using the final layer. The intuition is that different phonetic cues live at different temporal and representational scales.
+The current experiment also assigns feature heads to different encoder layers instead of always using the final layer. The hypothesis is that different phonetic cues appear at different temporal and representational scales.
 
 * **Laryngeal contrast** is placed earlier. Korean lenis/tense/aspirated distinctions rely on short-time cues such as VOT, aspiration, onset F0, and voice quality [[11](#ref-11), [12](#ref-12), [13](#ref-13)].
 * **Place of articulation** is placed in early-to-middle layers. Place cues often depend on burst/release noise, spectral shape, and formant transitions into the following vowel [[12](#ref-12), [14](#ref-14)].
@@ -162,7 +162,7 @@ Figure 2: Earlier phonetic error-change analysis. The current work extends this 
 
 ## Next Steps
 
-The main next step is to make the articulatory-feature story more rigorous. I am currently focusing on:
+The main next step is to make the articulatory-feature analysis more rigorous. I am currently focusing on:
 
 * ablations for “all six heads” vs. removing one head at a time
 * layer-placement comparisons for each feature type
