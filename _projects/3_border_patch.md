@@ -181,9 +181,9 @@ This project addressed the often-overlooked issue of **patch borders** in advers
 
 <p id="ref-3">[3] <a href="https://arxiv.org/abs/1904.08653">Fooling Automated Surveillance Cameras: Adversarial Patches to Attack Person Detection</a></p>
 
-<p id="ref-4">[4] Naturalistic Physical Adversarial Patch for Object Detectors (ICCV 2021)</p>
+<p id="ref-4">[4] <a href="https://doi.org/10.1109/ICCV48922.2021.00775">Naturalistic Physical Adversarial Patch for Object Detectors</a></p>
 
-<p id="ref-5">[5] Towards a Physical-World Adversarial Patch for Blinding Object Detection Models (Information Sciences, 2021)</p>
+<p id="ref-5">[5] <a href="https://doi.org/10.1016/j.ins.2020.08.087">Towards a Physical-World Adversarial Patch for Blinding Object Detection Models</a></p>
 
 <p id="ref-6">[6] <a href="https://doi.org/10.1088/0957-0233/20/10/104015">A Survey on Evaluation Methods for Image Interpolation</a></p>
 
