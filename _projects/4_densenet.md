@@ -47,7 +47,7 @@ Using the **EMNIST** (extended MNIST) dataset, design or adapt a CNN classifier 
 
 ## Data & Baselines
 
-**Dataset.** We studied the EMNIST paper and inspected each split. We chose **EMNIST-Balanced** (47 classes, equal per-class counts) as the training target to avoid the accuracy loss that comes from class imbalance, and reserved the larger **`bymerge` / `byclass`** splits for transfer learning. We split Balanced into train/validation/test and added a resizing utility.
+**Dataset.** We studied the EMNIST paper and inspected each split. We chose **EMNIST-Balanced** (47 classes, equal per-class counts) as the training target to avoid the accuracy loss that comes from class imbalance, and reserved the larger **By_Merge** and **By_Class** splits (the same characters with many more images) for transfer learning. We split Balanced into train/validation/test and added a resizing utility.
 
 **Baselines.** We trained two baselines and compared every later model against them:
 
@@ -80,7 +80,7 @@ Starting from DenseNet-121, we searched the training configuration systematicall
 - **Learning rate & optimizer.** Swept combinations at batch size 2048, then re-ran the promising ones at 1024 (dropping the slow Nadam / RMSProp), settling on **Nesterov, lr = 0.001**.
 - **Activation function.** Compared activations under the fixed configuration and measured Top-1/Top-5 accuracy plus **evaluation time** (full test pass) and **inference time** (new-input forward pass). **ELU** was chosen.
 - **Dropout.** Tested seven placements (after the FC layer, after each dense block, after transition blocks, inside dense-block conv layers, after the first conv) and several rates.
-- **Augmentation.** Compared five stacks (rotation → shift → distortion → zoom → brightness). Distortion cut evaluation/inference time, but the full stack doubled training time; we adopted **`aug_4`** (rotation + shift + distortion + zoom, rotation capped at 10° to avoid confusing similar digits/letters), together with **ReduceLROnPlateau** and **early stopping** to keep training time in check.
+- **Augmentation.** Compared five stacks (rotation → shift → distortion → zoom → brightness). Distortion cut evaluation/inference time, but the full stack doubled training time; we adopted the **four-transform stack** (rotation + shift + distortion + zoom, rotation capped at 10° to avoid confusing similar digits/letters), together with **ReduceLROnPlateau** and **early stopping** to keep training time in check.
 
 ---
 
@@ -88,15 +88,15 @@ Starting from DenseNet-121, we searched the training configuration systematicall
 
 The goal of the architecture search was a model with **fewer parameters, faster training, and shorter evaluation/inference time than DenseNet-121**, without losing accuracy. We varied the number of dense blocks, the number of convolution layers per block, and the transition-layer compression.
 
-| Variant | Change | Test accuracy |
+| Variant | Change from DenseNet-121 (6-12-24-16 conv layers per dense block) | Test accuracy |
 | --- | --- | ---: |
-| `layer_4` | Dense-block conv counts → **3-6-12-6** | 88.18% |
-| `layer_4_1` | Input resized to (32, 32, 1) | **89.84%** |
-| `layer_4_2` | Dense-block conv counts → 2-4-8-4 (≈½ the params of `layer_4_1`) | 89.26% |
+| A | Conv layers per dense block reduced to **3-6-12-6** | 88.18% |
+| A + 32×32 input | Same as A, input resized to (32, 32, 1) | **89.84%** |
+| A-half | Conv layers reduced further to 2-4-8-4 (about half the parameters of A + 32×32 input) | 89.26% |
 
-`layer_4` roughly **halved** evaluation/inference time. We then **transfer-learned** from the larger splits (modifying only the final layer for the new class count): pre-training on **`bymerge`** at batch 2048 for 5 epochs, then fine-tuning, was the most efficient. Over-shrinking the dense blocks (`layer_4_2`) capped the achievable accuracy.
+Variant A roughly **halved** evaluation/inference time. We then **transfer-learned** from the larger splits (modifying only the final layer for the new class count): pre-training on **By_Merge** at batch 2048 for 5 epochs, then fine-tuning on Balanced, was the most efficient. Over-shrinking the dense blocks (the A-half variant) capped the achievable accuracy.
 
-**Final model.** A modified DenseNet with 3-6-12-6 dense blocks, (32, 32, 1) input, **ELU** activation, dropout, `aug_4`, **Nesterov / lr 0.001 / batch 1024**, performance-based LR scheduling, and `bymerge` transfer learning, for a total of **2,152,667 parameters**.
+**Final model.** A modified DenseNet with 3-6-12-6 dense blocks, (32, 32, 1) input, **ELU** activation, dropout, the four-transform augmentation, **Nesterov / lr 0.001 / batch 1024**, performance-based LR scheduling, and By_Merge transfer learning, for a total of **2,152,667 parameters**.
 
 <div class="row justify-content-center">
   <div class="col-sm-7 mt-3">
@@ -135,7 +135,7 @@ Accuracy vs. parameter count on EMNIST-Balanced. The lightweight DenseNet reache
 ## Engineering Notes
 
 - **Distributed training** on 4× NVIDIA A5000 (24 GB) GPUs.
-- Reusable utilities were factored into Python modules (`datasets_utils.py`, `distribution_utils.py`, `train_and_test_utils.py`) so experiments could resume efficiently after kernel restarts.
+- Reusable utilities (dataset loading, multi-GPU distribution, training/testing loops) were factored into separate Python modules so experiments could resume efficiently after kernel restarts.
 
 ---
 

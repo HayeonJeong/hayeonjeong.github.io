@@ -101,7 +101,7 @@ We attack **human objects** in a digital environment, i.e., we assume a person i
 
 **Attacks.**
 
-- **Hiding attacks** prevent the detector from finding the person. We generate four hiding patches (`COCO_COCO`, `INRIA_COCO`, `INRIA_INRIA`, `COCO_INRIA`, named *train_attack*), starting from a gray patch and combining saliency, total-variation (TV), non-printability (NPS), and objectness losses (weights 1.0 / 2.5 / 0.1 / 3.0).
+- **Hiding attacks** prevent the detector from finding the person. We generate four hiding patches, each trained on one dataset and applied to one dataset. A patch is named *attack dataset_training dataset*: for example, INRIA_COCO is trained on COCO and attacked on INRIA images. Each patch starts from a gray patch and combining saliency, total-variation (TV), non-printability (NPS), and objectness losses (weights 1.0 / 2.5 / 0.1 / 3.0).
 - **Altering attacks** make the person be recognized as another class (e.g., teddy bear, kite, traffic light). We use untargeted altering patches, choosing the lowest-confidence target class each epoch.
 
 <div class="row align-items-center">
@@ -113,7 +113,7 @@ We attack **human objects** in a digital environment, i.e., we assume a person i
   </div>
 </div>
 <div class="caption">
-Left: <code>INRIA_INRIA</code> hiding patches at different application ratios. Right: untargeted altering patches optimized to be read as kite, teddy bear, and traffic light.
+Left: hiding patches trained on INRIA at different application ratios. Right: untargeted altering patches optimized to be read as kite, teddy bear, and traffic light.
 </div>
 
 **Metrics.** The ASR is the fraction of detected *person* objects that are misclassified:
@@ -129,14 +129,14 @@ $$
 
 ### 1. Interpolation method
 
-Bicubic (and bilinear) interpolation applies the patch **with a black border**; nearest-neighbor applies it **without** one. Across all four hiding patches, **bicubic gives a higher ASR**, up to a **2.4%** gap (e.g., 75.3% → 77.7% for `INRIA_INRIA` at ratio 0.2). Even small pixel changes from interpolation measurably affect the ASR, so **adding a thin black border can strengthen the patch.**
+Bicubic (and bilinear) interpolation applies the patch **with a black border**; nearest-neighbor applies it **without** one. Across all four hiding patches, **bicubic gives a higher ASR**, up to a **2.4%** gap (e.g., 75.3% → 77.7% for the INRIA-trained, INRIA-attacked patch at ratio 0.2). Even small pixel changes from interpolation measurably affect the ASR, so **adding a thin black border can strengthen the patch.**
 
-| Patch (256×256, ratio 0.2) | Bicubic (with border) | Nearest (no border) |
+| Patch (256×256, ratio 0.2): attack_train | Bicubic (with border) | Nearest (no border) |
 | --- | ---: | ---: |
-| COCO_COCO | 39.7 | 38.2 |
-| COCO_INRIA | 66.9 | 64.7 |
-| INRIA_COCO | 32.5 | 31.2 |
-| INRIA_INRIA | **77.7** | 75.3 |
+| COCO_COCO (trained on COCO, attacked on COCO) | 39.7 | 38.2 |
+| COCO_INRIA (trained on INRIA, attacked on COCO) | 66.9 | 64.7 |
+| INRIA_COCO (trained on COCO, attacked on INRIA) | 32.5 | 31.2 |
+| INRIA_INRIA (trained on INRIA, attacked on INRIA) | **77.7** | 75.3 |
 
 ### 2. Patch size and application ratio
 
@@ -150,8 +150,8 @@ No single monotone trend holds across all patches. However, a **gray border of 4
 
 The best border color depends on the **dataset the patch was trained on**:
 
-- `INRIA_COCO` (trained on COCO): **white** borders raised the ASR most (max **+9.8%**, mean +4.5%); black borders were neutral or worse.
-- `INRIA_INRIA` (trained on INRIA): **gray** borders helped most (max **+4.9%**, mean +1.5%); white tended to hurt.
+- Patch trained on COCO (INRIA_COCO): **white** borders raised the ASR most (max **+9.8%**, mean +4.5%); black borders were neutral or worse.
+- Patch trained on INRIA (INRIA_INRIA): **gray** borders helped most (max **+4.9%**, mean +1.5%); white tended to hurt.
 
 Because each patch is optimized on its own training data, the border color that best matches that dataset's color statistics maximizes the attack.
 
@@ -161,7 +161,7 @@ Because each patch is optimized on its own training data, the border color that 
   </div>
 </div>
 <div class="caption">
-Hiding-attack results for an <code>INRIA_INRIA</code> patch under different border colors, ordered by confidence. A lower confidence score means a more successful attack (threshold 0.4). The attack succeeds most reliably with a <strong>gray</strong> border and least with a <strong>white</strong> border.
+Hiding-attack results for a patch trained on INRIA under different border colors, ordered by confidence. A lower confidence score means a more successful attack (threshold 0.4). The attack succeeds most reliably with a <strong>gray</strong> border and least with a <strong>white</strong> border.
 </div>
 
 ---
