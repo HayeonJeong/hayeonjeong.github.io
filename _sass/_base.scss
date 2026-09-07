@@ -302,6 +302,24 @@ ul.task-list input[type="checkbox"] {
 
     .more-info {
       font-size: 0.75rem;
+      font-family: inherit;
+      overflow-wrap: anywhere;
+    }
+  }
+
+  .about-table {
+    width: 100% !important;
+
+    tr {
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+
+    td {
+      display: block;
+      white-space: normal !important;
+      width: auto !important;
+      padding: 0 !important;
     }
   }
 }
