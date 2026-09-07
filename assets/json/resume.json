@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Hayeon Jeong",
-    "label": "MS Student",
+    "label": "M.S. Student",
     "image": "",
     "email": "hayeon.jeong@yonsei.ac.kr",
     "phone": "",
     "url": "https://hayeonjeong.github.io/",
-    "summary": "I am an MS student in the Multimedia Computing & Machine Learning (MCML) group at Yonsei University, advised by <a href=\"https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en\">Prof. Jong-Seok Lee</a>, and a six-month Visiting Graduate Researcher at the Computational Machine Learning Lab, UCLA, advised by <a href=\"https://web.cs.ucla.edu/~chohsieh/\">Prof. Cho-Jui Hsieh</a>. My research interests span visual generative models, post-training for generative models, mechanistic interpretability, and AI safety & reliability.",
+    "summary": "I am an M.S. student at Yonsei University (<a href=\"http://mcml.yonsei.ac.kr/\">MCML Lab</a>, advised by <a href=\"http://mcml.yonsei.ac.kr/professor\">Prof. Jong-Seok Lee</a>), currently a Visiting Researcher at the <a href=\"https://sites.google.com/view/chohsieh-research/home\">CML Lab</a>, UCLA (advised by <a href=\"https://web.cs.ucla.edu/~chohsieh/\">Prof. Cho-Jui Hsieh</a>). My research interests span visual generative models, post-training for generative models, mechanistic interpretability, and AI safety & reliability.",
     "location": {
       "address": "Seoul, Republic of Korea",
       "postalCode": "",
