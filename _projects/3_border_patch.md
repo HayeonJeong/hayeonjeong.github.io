@@ -27,7 +27,7 @@ _styles: >
   <div class="col-sm-10">
     <p>
       Undergraduate graduation research, Soongsil University (Jan – Oct 2024)<br />
-      <strong>Best Paper Award (2nd Place)</strong>, Undergraduate Thesis Competition
+      <strong>2nd Place</strong>, Undergraduate Thesis Competition
     </p>
     <p>
       <i class="fa-solid fa-file-pdf"></i>
@@ -57,9 +57,9 @@ This study analyzes how various *border conditions* affect the attack success ra
 
 Prior work on adversarial patches has focused on making patches **smaller** or **less noticeable**, adjusting patch characteristics through loss functions and transformations to raise the ASR. What has *not* been studied is the boundary between the background image and the patch, that is, the pixels and **borders** created when a patch is actually applied to an image.
 
-Existing studies are inconsistent here: some add borders, some do not, and physical patches are often displayed with wide black or white borders (e.g., patches shown on an LCD screen, or printed with a visible frame). Because adversarial patches optimize individual pixels in fine detail, an inconsistent border can actually make the patched object *easier* to detect, lowering the ASR and hurting reproducibility.
+Existing studies are inconsistent here: some add borders, some do not, and physical patches are often displayed with wide black or white borders (e.g., patches shown on an LCD screen, or printed with a visible frame). If the border between the patch and the background image is inconsistent, the effectiveness of the patch decreases, lowering the ASR and hurting reproducibility. Maintaining consistent borders is therefore important both for maximizing the ASR and for reproducible attacks.
 
-> **Our objective:** analyze how the presence, color, and thickness of borders, as well as the interpolation method used during application, affect the ASR, and show that the application process itself is a critical factor in attack effectiveness.
+> **Our objective:** analyze how the presence, color, and thickness of borders, as well as the interpolation method used during application, affect the ASR, and identify conditions that maximize attack performance.
 
 **Contributions.**
 
@@ -129,7 +129,7 @@ $$
 
 ### 1. Interpolation method
 
-Bicubic (and bilinear) interpolation applies the patch **with a black border**; nearest-neighbor applies it **without** one. Across all four hiding patches, **bicubic gives a higher ASR**, up to a **2.4%** gap (e.g., 75.3% → 77.7% for the INRIA-trained, INRIA-attacked patch at ratio 0.2). Even small pixel changes from interpolation measurably affect the ASR, so **adding a thin black border can strengthen the patch.**
+Bicubic (and bilinear) interpolation applies the patch **with a black border**; nearest-neighbor applies it **without** one. Across all four hiding patches, **bicubic gives a higher ASR**, up to a **2.4%** gap (e.g., 75.3% → 77.7% for the INRIA-trained, INRIA-attacked patch at ratio 0.2). Even small pixel changes from interpolation measurably affect the ASR, so **a black border enhances the effectiveness of the patch.**
 
 | Patch (256×256, ratio 0.2): attack_train | Bicubic (with border) | Nearest (no border) |
 | --- | ---: | ---: |
@@ -140,11 +140,11 @@ Bicubic (and bilinear) interpolation applies the patch **with a black border**; 
 
 ### 2. Patch size and application ratio
 
-The ASR *difference* between bordered and unbordered patches does **not** depend on patch size. It does depend on the **application ratio**: for hiding patches the difference varies by up to **9.8%** (mean **4.5%**), and since it is positive in almost every case, borders generally **increase** the ASR at the common application ratios of 0.1–0.3.
+The ASR *difference* between bordered and unbordered patches does **not** depend on patch size. It does depend on the **application ratio**: for hiding patches the difference varies by up to **9.8%** (mean **4.5%**), and since it is positive in most cases, borders generally **increase** the ASR at the common application ratios of 0.1–0.3.
 
 ### 3. Border thickness
 
-No single monotone trend holds across all patches. However, a **gray border of 4–8 pixels** consistently produced higher success rates across conditions, making it a useful default.
+No consistent relationship between thickness and ASR could be identified: the COCO-trained hiding patch scored higher with thicker borders, while the INRIA-trained one scored lower. In general, however, a **gray border of 4–8 pixels** clearly increased the ASR.
 
 ### 4. Border color
 
@@ -153,7 +153,7 @@ The best border color depends on the **dataset the patch was trained on**:
 - Patch trained on COCO (INRIA_COCO): **white** borders raised the ASR most (max **+9.8%**, mean +4.5%); black borders were neutral or worse.
 - Patch trained on INRIA (INRIA_INRIA): **gray** borders helped most (max **+4.9%**, mean +1.5%); white tended to hurt.
 
-Because each patch is optimized on its own training data, the border color that best matches that dataset's color statistics maximizes the attack.
+Each patch is optimized to be inconspicuous within its own training dataset, so we infer that the color characteristics of that dataset affect how the border color changes the ASR.
 
 <div class="row justify-content-center">
   <div class="col-sm-10 mt-3">
@@ -168,6 +168,6 @@ Hiding-attack results for a patch trained on INRIA under different border colors
 
 ## Conclusion
 
-This project addressed the often-overlooked issue of **patch borders** in adversarial-patch research and showed that the *application process*, not just patch generation, materially affects attack performance. Bicubic interpolation increases the ASR; patch size is unrelated to the border effect, while borders generally help at application ratios of 0.1–0.3; border thickness has no single trend, but a gray 4–8 px border is a reliable default; and the optimal border color depends on the training dataset. These results give practical guidance for building stronger patches and, in turn, for hardening object detectors against them.
+This project addressed the often-overlooked issue of **patch borders** in adversarial-patch research and showed that the conditions under which a patch is applied, not just how it is generated, affect attack performance. Bicubic interpolation increases the ASR; patch size is unrelated to the border effect, while borders generally help at application ratios of 0.1–0.3; border thickness has no consistent trend, but a gray 4–8 px border generally increases the ASR; and the effect of border color depends on the dataset the patch was trained on. These factors deserve attention in adversarial-patch research, both for maximizing attacks and for improving the robustness of object detectors.
 
 *Future work:* validate these strategies across more datasets, detectors, and physical-world conditions.
