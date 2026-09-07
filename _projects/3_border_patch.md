@@ -46,7 +46,7 @@ _styles: >
 
 ## Abstract
 
-The vulnerability of object detection models to adversarial attacks has led to extensive research, and adversarial patch attacks are a key method for distorting model predictions. Many factors affect the success rate of such attacks, but existing studies have focused primarily on **patch generation**, neglecting elements such as **patch borders** and **interpolation methods**.
+The vulnerability of object detection models to adversarial attacks has led to extensive research, and adversarial patch attacks [[1](#ref-1), [2](#ref-2)] are a key method for distorting model predictions. Many factors affect the success rate of such attacks, but existing studies have focused primarily on **patch generation**, neglecting elements such as **patch borders** and **interpolation methods**.
 
 This study analyzes how various *border conditions* affect the attack success rate (ASR) of adversarial patches on object detection models. Using patches generated from multiple datasets, we apply different border thicknesses, colors, and interpolation methods, and we also examine the effect of patch size and application ratio. Based on these experiments, we suggest concrete ways to maximize patch effectiveness, and we argue that these overlooked factors are important both for stronger attacks and for building more robust detectors.
 
@@ -54,9 +54,9 @@ This study analyzes how various *border conditions* affect the attack success ra
 
 ## Motivation
 
-Prior work on adversarial patches has focused on making patches **smaller** or **less noticeable**, adjusting patch characteristics through loss functions and transformations to raise the ASR. What has *not* been studied is the boundary between the background image and the patch, that is, the pixels and **borders** created when a patch is actually applied to an image.
+Prior work on adversarial patches has focused on making patches **smaller** or **less noticeable**, adjusting patch characteristics through loss functions and transformations to raise the ASR [[3](#ref-3), [4](#ref-4)]. What has *not* been studied is the boundary between the background image and the patch, that is, the pixels and **borders** created when a patch is actually applied to an image.
 
-Existing studies are inconsistent here: some add borders, some do not, and physical patches are often displayed with wide black or white borders (e.g., patches shown on an LCD screen, or printed with a visible frame). If the border between the patch and the background image is inconsistent, the effectiveness of the patch decreases, lowering the ASR and hurting reproducibility. Maintaining consistent borders is therefore important both for maximizing the ASR and for reproducible attacks.
+Existing studies are inconsistent here: some add borders, some do not, and physical patches are often displayed with wide black or white borders (e.g., patches shown on an LCD screen, or printed with a visible frame) [[3](#ref-3), [5](#ref-5)]. If the border between the patch and the background image is inconsistent, the effectiveness of the patch decreases, lowering the ASR and hurting reproducibility. Maintaining consistent borders is therefore important both for maximizing the ASR and for reproducible attacks.
 
 > **Our objective:** analyze how the presence, color, and thickness of borders, as well as the interpolation method used during application, affect the ASR, and identify conditions that maximize attack performance.
 
@@ -72,7 +72,7 @@ Existing studies are inconsistent here: some add borders, some do not, and physi
 
 We systematically vary the conditions that an attacker can set as hyper-parameters or add arbitrarily when applying an existing patch:
 
-**Interpolation methods.** To fit a patch to the object's bounding box, resizing (interpolation) is required, and each method treats the patch edges differently. A binary mask marks the object area with `1` (patch placed) and the outside with `0`.
+**Interpolation methods.** To fit a patch to the object's bounding box, resizing (interpolation) is required, and each method treats the patch edges differently [[6](#ref-6)]. A binary mask marks the object area with `1` (patch placed) and the outside with `0`.
 
 - **Bilinear / bicubic** compute new pixels from neighboring values; because the mask sets outside pixels to zero, several zero-value pixels appear around the edge, producing a **black border**.
 - **Nearest neighbor** copies the closest known pixel, filling the edge with the nearest patch value and leaving the border **less noticeable**.
@@ -96,11 +96,11 @@ Patch applications for a 256×256 patch under three border colors (white / gray 
 
 We attack **human objects** in a digital environment, i.e., we assume a person is holding an adversarial patch.
 
-**Datasets & detector.** We use MS-COCO (the *person* class, ~5k validation images) and the INRIA Person dataset (614 train / 288 test), and we attack two **YOLOv5** detectors, one trained on COCO-person and one on INRIA.
+**Datasets & detector.** We use MS-COCO [[7](#ref-7)] (the *person* class, ~5k validation images) and the INRIA Person dataset [[8](#ref-8)] (614 train / 288 test), and we attack two **YOLOv5** detectors, one trained on COCO-person and one on INRIA.
 
 **Attacks.**
 
-- **Hiding attacks** prevent the detector from finding the person. We generate four hiding patches, each trained on one dataset and applied to one dataset. A patch is named *attack dataset_training dataset*: for example, INRIA_COCO is trained on COCO and attacked on INRIA images. Each patch starts from a gray patch and combining saliency, total-variation (TV), non-printability (NPS), and objectness losses (weights 1.0 / 2.5 / 0.1 / 3.0).
+- **Hiding attacks** prevent the detector from finding the person. We generate four hiding patches, each trained on one dataset and applied to one dataset. A patch is named *attack dataset_training dataset*: for example, INRIA_COCO is trained on COCO and attacked on INRIA images. Each patch starts from a gray patch and combining saliency, total-variation (TV), non-printability (NPS) [[9](#ref-9)], and objectness losses (weights 1.0 / 2.5 / 0.1 / 3.0), following the patch-generation setup of Thys et al. [[3](#ref-3)].
 - **Altering attacks** make the person be recognized as another class (e.g., teddy bear, kite, traffic light). We use untargeted altering patches, choosing the lowest-confidence target class each epoch.
 
 <div class="row align-items-center">
@@ -169,4 +169,30 @@ Hiding-attack results for a patch trained on INRIA under different border colors
 
 This project addressed the often-overlooked issue of **patch borders** in adversarial-patch research and showed that the conditions under which a patch is applied, not just how it is generated, affect attack performance. Bicubic interpolation increases the ASR; patch size is unrelated to the border effect, while borders generally help at application ratios of 0.1–0.3; border thickness has no consistent trend, but a gray 4–8 px border generally increases the ASR; and the effect of border color depends on the dataset the patch was trained on. These factors deserve attention in adversarial-patch research, both for maximizing attacks and for improving the robustness of object detectors.
 
-*Future work:* validate these strategies across more datasets, detectors, and physical-world conditions.
+*Future work:* validate these strategies across more datasets, detectors, and physical-world conditions [[10](#ref-10), [11](#ref-11)].
+
+---
+
+## References
+
+<p id="ref-1">[1] <a href="https://arxiv.org/abs/1712.09665">Adversarial Patch</a></p>
+
+<p id="ref-2">[2] <a href="https://arxiv.org/abs/1806.02299">DPatch: An Adversarial Patch Attack on Object Detectors</a></p>
+
+<p id="ref-3">[3] <a href="https://arxiv.org/abs/1904.08653">Fooling Automated Surveillance Cameras: Adversarial Patches to Attack Person Detection</a></p>
+
+<p id="ref-4">[4] Naturalistic Physical Adversarial Patch for Object Detectors (ICCV 2021)</p>
+
+<p id="ref-5">[5] Towards a Physical-World Adversarial Patch for Blinding Object Detection Models (Information Sciences, 2021)</p>
+
+<p id="ref-6">[6] <a href="https://doi.org/10.1088/0957-0233/20/10/104015">A Survey on Evaluation Methods for Image Interpolation</a></p>
+
+<p id="ref-7">[7] <a href="https://arxiv.org/abs/1405.0312">Microsoft COCO: Common Objects in Context</a></p>
+
+<p id="ref-8">[8] <a href="https://doi.org/10.1109/CVPR.2005.177">Histograms of Oriented Gradients for Human Detection</a></p>
+
+<p id="ref-9">[9] <a href="https://doi.org/10.1145/2976749.2978392">Accessorize to a Crime: Real and Stealthy Attacks on State-of-the-Art Face Recognition</a></p>
+
+<p id="ref-10">[10] <a href="https://www.usenix.org/conference/woot18/presentation/eykholt">Physical Adversarial Examples for Object Detectors</a></p>
+
+<p id="ref-11">[11] <a href="https://arxiv.org/abs/1910.11099">Adversarial T-shirt! Evading Person Detectors in a Physical World</a></p>
