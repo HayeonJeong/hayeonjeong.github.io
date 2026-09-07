@@ -6,7 +6,7 @@
     "email": "hayeon.jeong@yonsei.ac.kr",
     "phone": "",
     "url": "https://hayeonjeong.github.io/",
-    "summary": "I am an MS student in the Multimedia Computing & Machine Learning (MCML) group at Yonsei University, advised by <a href=\"https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en\">Prof. Jong-Seok Lee</a>, and a six-month Visiting Graduate Researcher at the Computational Machine Learning Lab, UCLA, advised by <a href=\"https://web.cs.ucla.edu/~chohsieh/\">Prof. Cho-Jui Hsieh</a>. My research interests span generative models (text-to-image diffusion), reinforcement learning for generation, mechanistic interpretability, and AI safety & reliability.",
+    "summary": "I am an MS student in the Multimedia Computing & Machine Learning (MCML) group at Yonsei University, advised by <a href=\"https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en\">Prof. Jong-Seok Lee</a>, and a six-month Visiting Graduate Researcher at the Computational Machine Learning Lab, UCLA, advised by <a href=\"https://web.cs.ucla.edu/~chohsieh/\">Prof. Cho-Jui Hsieh</a>. My research interests span visual generative models, post-training for generative models, mechanistic interpretability, and AI safety & reliability.",
     "location": {
       "address": "Seoul, Republic of Korea",
       "postalCode": "",
@@ -24,13 +24,13 @@
   },
   "research interests": [
     {
-      "name": "Generative Models (T2I Diffusion)",
+      "name": "Visual Generative Models",
       "summary": "Text-to-image diffusion: post-training, reward modeling, and evaluation.",
       "keywords": []
     },
     {
-      "name": "RL for Generation",
-      "summary": "Reinforcement post-training to better align generative models with prompt requirements.",
+      "name": "Post-training for Generative Models",
+      "summary": "RL and preference-based post-training to better align generative models with prompt requirements.",
       "keywords": []
     },
     {
@@ -62,12 +62,7 @@
       "url": "https://www.berkeley.edu/",
       "studyType": "Visiting Undergraduate Student",
       "startDate": "2023-01-10",
-      "endDate": "2023-05-12",
-      "courses": [
-        "CS61A: Structure and Interpretation of Computer Programs",
-        "CS61B: Data Structures",
-        "Physics 77: Computational Techniques in Physics"
-      ]
+      "endDate": "2023-05-12"
     },
     {
       "institution": "Soongsil University",
@@ -77,37 +72,47 @@
       "studyType": "Bachelor of Science",
       "startDate": "2020-03-03",
       "endDate": "2025-02-21",
-      "score": "4.11/4.5 (major 4.09/4.5), Magna Cum Laude",
+      "score": "4.11/4.5, Magna Cum Laude",
       "summary": "4.11/4.5 GPA (Magna Cum Laude)"
     }
   ],
   "research experience": [
     {
-      "name": "Computational Machine Learning Lab, UCLA",
-      "position": "Visiting Graduate Researcher",
+      "name": "UCLA",
+      "position": "Visiting Researcher",
       "url": "",
       "startDate": "2026-05-01",
       "endDate": "2026-10-31",
-      "summary": "Advised by <a href=\"https://web.cs.ucla.edu/~chohsieh/\">Prof. Cho-Jui Hsieh</a>. Flip-GRPO: constraint-level counterfactual pairs for reinforcement post-training of text-to-image models (ongoing).",
-      "highlights": []
+      "summary": "",
+      "highlights": [
+        "Part of the <a href=\"https://sites.google.com/view/chohsieh-research/home\">CML Lab</a>, advised by <a href=\"https://web.cs.ucla.edu/~chohsieh/\">Prof. Cho-Jui Hsieh</a>.",
+        "Working on <i>Flip What Fails</i> (first author): RL post-training of text-to-image models on long real-user prompts with counterfactual pairs that flip only the requirements a model fails, preserving satisfied ones."
+      ]
     },
     {
-      "name": "Multimedia Computing & Machine Learning (MCML) Group, Yonsei University",
+      "name": "Yonsei University",
       "position": "M.S. Researcher",
-      "url": "https://mcml.yonsei.ac.kr/",
+      "url": "",
       "startDate": "2025-03-01",
       "endDate": "Present",
-      "summary": "Advised by <a href=\"https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en\">Prof. Jong-Seok Lee</a>. Concept-level generative collapse in diffusion models (under review, first author).",
-      "highlights": []
+      "summary": "",
+      "highlights": [
+        "Part of the <a href=\"http://mcml.yonsei.ac.kr/\">MCML Lab</a>, advised by <a href=\"http://mcml.yonsei.ac.kr/professor\">Prof. Jong-Seok Lee</a>.",
+        "Formalized concept dominance in multi-concept diffusion generation and built DominanceBench; showed via controlled fine-tuning that low training-image diversity drives it, and found through head ablation that, unlike memorization, it cannot be removed by ablating any small set of heads <b>(under review, ACCV '26)</b>."
+      ]
     },
     {
-      "name": "AI Security Lab, Soongsil University",
+      "name": "Soongsil University",
       "position": "Undergraduate Research Intern",
-      "url": "https://aisc.ssu.ac.kr/",
+      "url": "",
       "startDate": "2023-06-01",
       "endDate": "2024-08-31",
-      "summary": "Advised by Prof. Daeseon Choi. Thermal–RGB multimodal person-detection defense (AVSS 2025); generative backup against storage-encryption attacks; privacy-assistant framework using small LLMs (Best Paper Award).",
-      "highlights": []
+      "summary": "",
+      "highlights": [
+        "Part of the <a href=\"https://aisc.ssu.ac.kr/\">AI Safety Center</a>, advised by Prof. Daeseon Choi.",
+        "Trained YOLOv5/YOLOv8 person detectors and ran the full physical-world experiment (printed patches, 20 participants, paired RGB–thermal capture) for a thermal-guided adversarial-patch defense <b>(AVSS '25)</b>.",
+        "Built an on-device privacy assistant that summarizes consent forms with LLaMA-3 8B Instruct; key-phrase marking raised precision from 77.3% to 98.8% <b>(Best Paper Award, KIISC Chungcheong Conference)</b>."
+      ]
     }
   ],
   "publications": [
@@ -130,22 +135,22 @@
   ],
   "projects": [
     {
-      "name": "Phonetic-Aware Encoder Tuning for L2 Korean ASR",
-      "summary": "Designed a robust ASR framework mitigating phonetic disruption in non-native Korean speech via LoRA-adapted Whisper encoder and auxiliary CTC-based phonetic supervision.",
+      "name": "Phonetic-Aware Encoder Tuning for L2 Korean Speech Recognition",
+      "summary": "Automatic speech recognition (ASR) framework robust to phonetic disruption in non-native Korean speech via a LoRA-adapted Whisper encoder with auxiliary connectionist temporal classification (CTC) supervision.",
       "startDate": "2025-09-01",
       "endDate": "2025-12-31",
       "url": "https://drive.google.com/file/d/1kqZbzpuM9qS_IGhl1S0CaLlf8Dck-QxD/view?usp=sharing"
     },
     {
-      "name": "Border Conditions in Adversarial Patch Attacks (Undergraduate Graduation Research)",
-      "summary": "Analyzed how patch borders and interpolation change the attack success rate of adversarial patches on object detectors, showing the patch application process — not just generation — materially affects attack performance. Best Paper Award (2nd Place), Undergraduate Thesis Competition.",
+      "name": "Border Conditions in Adversarial Patch Attacks (Undergraduate Thesis)",
+      "summary": "Showed on YOLOv5 that patch border color, thickness, and interpolation shift hiding-attack success rates by up to 9.8 points (4.5 on average); gray 4–8 px borders help most. 2nd Place, Undergraduate Thesis Competition, Soongsil University.",
       "startDate": "2024-01-01",
       "endDate": "2024-10-31",
       "url": "https://hayeonjeong.github.io/projects/3_border_patch/"
     },
     {
-      "name": "Lightweight DenseNet for EMNIST",
-      "summary": "Designed a compact DenseNet variant that beats ResNet-50 accuracy on EMNIST (90.72%) with roughly 10x fewer parameters and ~2x faster inference. Team of 4 (team lead).",
+      "name": "Lightweight DenseNet",
+      "summary": "EMNIST classifier with a DenseNet variant using 10× fewer parameters than ResNet-50 and half the training time, and 2× faster than DenseNet-121. Team of 4 (team lead).",
       "startDate": "2024-03-01",
       "endDate": "2024-06-30",
       "url": "https://github.com/HayeonJeong/2024_Spring_ANN"
@@ -159,21 +164,21 @@
       "summary": ""
     },
     {
-      "title": "Professor's Scholarship (25% Tuition, Merit-based)",
+      "title": "Professor's Scholarship (50% Tuition, Merit-based)",
       "date": "2024",
-      "awarder": "School of Electronic Engineering, Soongsil University",
+      "awarder": "School of Electronic and Information Engineering, Soongsil University",
       "summary": ""
     },
     {
-      "title": "Truth Award – Professor's Scholarship (50% Tuition, Merit-based)",
+      "title": "Truth Award – Professor's Scholarship (25% Tuition, Merit-based)",
       "date": "2024",
       "awarder": "Soongsil University",
       "summary": ""
     },
     {
-      "title": "Professor's Scholarship (25% Tuition, Merit-based)",
+      "title": "Academic Excellence Scholarship (25% Tuition, Merit-based)",
       "date": "2021",
-      "awarder": "School of Electronic Engineering, Soongsil University",
+      "awarder": "Soongsil University",
       "summary": ""
     }
   ],
@@ -195,17 +200,27 @@
     {
       "name": "Programming",
       "icon": "fa-solid fa-code",
-      "keywords": ["Python", "Java", "C/C++"]
+      "keywords": [
+        "Python",
+        "Java",
+        "C/C++"
+      ]
     },
     {
       "name": "Frameworks",
       "icon": "fa-solid fa-layer-group",
-      "keywords": ["PyTorch", "Hugging Face (Diffusers/Transformers)"]
+      "keywords": [
+        "PyTorch",
+        "Hugging Face (Diffusers/Transformers)"
+      ]
     },
     {
       "name": "Tools",
       "icon": "fa-solid fa-toolbox",
-      "keywords": ["Git", "LaTeX"]
+      "keywords": [
+        "Git",
+        "LaTeX"
+      ]
     }
   ],
   "other experience": [
@@ -213,7 +228,7 @@
       "title": "Trainee, SK Hynix Semiconductor Curriculum 2.0 (SUNI × SK hynix)",
       "startDate": "2023-09-01",
       "endDate": "2023-12-31",
-      "summary": "Completed coursework on the semiconductor market, memory devices (DRAM, NAND), CIS, and future semiconductor trends."
+      "summary": "Completed coursework on the semiconductor market, memory devices (DRAM, NAND), CIS, and industry trends."
     },
     {
       "title": "Data Annotator, AI Training Data Construction Project (Univa)",
@@ -222,16 +237,16 @@
       "summary": "Annotated mathematical-equation images to build supervised training data for an OCR recognition model."
     },
     {
-      "title": "KT Mentoring Program Mentor",
-      "startDate": "2020-10-01",
-      "endDate": "2022-03-31",
-      "summary": "Developed a 6-month Math/English curriculum for mentees."
-    },
-    {
       "title": "Baird Volunteer Corps Member, Soongsil University",
       "startDate": "2020-10-01",
       "endDate": "2022-02-28",
-      "summary": "Contributed to community safety through a CCTV installation project with the local police station; youth education volunteer programs."
+      "summary": "Contributed to community safety through a CCTV installation project with the local police station and youth education programs."
+    },
+    {
+      "title": "KT Mentoring Program Mentor",
+      "startDate": "2020-10-01",
+      "endDate": "2022-03-31",
+      "summary": "Developed a 6-month Math/English curriculum for middle school students."
     }
   ],
   "languages": [
@@ -242,7 +257,7 @@
     },
     {
       "language": "English",
-      "fluency": "Updated TOEFL iBT 4.5 (≈ 90 for old ver)",
+      "fluency": "Professional working proficiency",
       "icon": ""
     }
   ],
