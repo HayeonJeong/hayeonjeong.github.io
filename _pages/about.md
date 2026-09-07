@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: MS Student @ <a href="https://www.yonsei.ac.kr" target="_blank">Yonsei University</a>, <a href="https://mcml.yonsei.ac.kr" target="_blank">MCML Group</a><br>Visiting Graduate Researcher @ <a href="https://www.ucla.edu/" target="_blank">UCLA</a>, <a href="https://web.cs.ucla.edu/~chohsieh/" target="_blank">CML Lab</a>
+subtitle: M.S. Student @ <a href="https://www.yonsei.ac.kr" target="_blank">Yonsei University</a>, <a href="https://mcml.yonsei.ac.kr" target="_blank">MCML Lab</a><br>Visiting Researcher @ <a href="https://www.ucla.edu/" target="_blank">UCLA</a>, <a href="https://sites.google.com/view/chohsieh-research/home" target="_blank">CML Lab</a>
 
 profile:
   align: right
@@ -33,8 +33,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an **MS student** in the **[MCML](https://mcml.yonsei.ac.kr/)** group at Yonsei University, advised by [Prof. Jong-Seok Lee](https://scholar.google.com/citations?user=YGwwt6cAAAAJ&hl=en).
-I am currently a six-month **Visiting Graduate Researcher** at the **[CML Lab](https://web.cs.ucla.edu/~chohsieh/)**, UCLA, advised by [Prof. Cho-Jui Hsieh](https://scholar.google.com/citations?user=Wy89g4IAAAAJ&hl=en).
+I am an **M.S. student** at Yonsei University ([MCML Lab](https://mcml.yonsei.ac.kr/), advised by [Prof. Jong-Seok Lee](https://mcml.yonsei.ac.kr/professor)), currently a **Visiting Researcher** at the [CML Lab](https://sites.google.com/view/chohsieh-research/home), UCLA (advised by [Prof. Cho-Jui Hsieh](https://web.cs.ucla.edu/~chohsieh/)).
 
 My research interests lie at the intersection of **Generative AI** and **Trustworthy AI**:
 
