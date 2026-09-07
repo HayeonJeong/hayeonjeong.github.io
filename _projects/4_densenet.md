@@ -9,8 +9,7 @@ related_publications: false
 github: https://github.com/HayeonJeong/2024_Spring_ANN
 _styles: >
   .post article table {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0.5rem auto 1.75rem auto;
     border-collapse: collapse;
     border: 1px solid var(--global-divider-color);
   }

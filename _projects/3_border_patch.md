@@ -8,8 +8,7 @@ category: 2024
 related_publications: false
 _styles: >
   .post article table {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0.5rem auto 1.75rem auto;
     border-collapse: collapse;
     border: 1px solid var(--global-divider-color);
   }
