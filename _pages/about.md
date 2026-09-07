@@ -43,7 +43,7 @@ My research interests lie at the intersection of **Generative AI** and **Trustwo
 
 **Education**
 
-<table style="width: 100%; border: none; margin-bottom: 1rem; font-size: 0.95em; line-height: 1.5; color: inherit; background: transparent;">
+<table style="width: auto; max-width: 100%; border: none; margin-bottom: 1rem; font-size: 0.95em; line-height: 1.5; color: inherit; background: transparent;">
   <tr>
     <td style="white-space: nowrap; width: 11em; padding: 0.25rem 1rem 0.25rem 0; vertical-align: top; opacity: 0.7; border: none;">2025.03 – 2027.02</td>
     <td style="padding: 0.25rem 0; border: none;"><b>M.S.</b>, School of Integrated Technology, <a href="https://www.yonsei.ac.kr" target="_blank">Yonsei University</a><br><span style="opacity: 0.7;">GPA 4.16/4.30</span></td>
@@ -60,7 +60,7 @@ My research interests lie at the intersection of **Generative AI** and **Trustwo
 
 **Experience**
 
-<table style="width: 100%; border: none; margin-bottom: 1rem; font-size: 0.95em; line-height: 1.5; color: inherit; background: transparent;">
+<table style="width: auto; max-width: 100%; border: none; margin-bottom: 1rem; font-size: 0.95em; line-height: 1.5; color: inherit; background: transparent;">
   <tr>
     <td style="white-space: nowrap; width: 11em; padding: 0.25rem 1rem 0.25rem 0; vertical-align: top; opacity: 0.7; border: none;">2026.05 – 2026.10</td>
     <td style="padding: 0.25rem 0; border: none;"><b>Visiting Researcher</b>, <a href="https://sites.google.com/view/chohsieh-research/home" target="_blank">CML Lab</a>, UCLA<br><span style="opacity: 0.7;">advised by <a href="https://web.cs.ucla.edu/~chohsieh/" target="_blank">Prof. Cho-Jui Hsieh</a></span></td>
