@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: M.S. Student @ <a href="https://www.yonsei.ac.kr" target="_blank">Yonsei University</a>, <a href="https://mcml.yonsei.ac.kr" target="_blank">MCML Lab</a><br>Visiting Researcher @ <a href="https://www.ucla.edu/" target="_blank">UCLA</a>, <a href="https://sites.google.com/view/chohsieh-research/home" target="_blank">CML Lab</a>
+subtitle: '[<a href="/cv/">CV</a>]. [<a href="https://scholar.google.com/citations?user=3BPlPxAAAAAJ" target="_blank">Google Scholar</a>]. [<a href="https://github.com/HayeonJeong" target="_blank">GitHub</a>]. [<a href="https://www.linkedin.com/in/hayeonjeong0727/" target="_blank">LinkedIn</a>].'
 
 profile:
   align: right
