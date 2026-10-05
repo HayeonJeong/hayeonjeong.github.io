@@ -33,43 +33,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an **M.S. student** at Yonsei University ([MCML Lab](https://mcml.yonsei.ac.kr/), advised by [Prof. Jong-Seok Lee](https://mcml.yonsei.ac.kr/professor)), currently a **Visiting Researcher** at the [CML Lab](https://sites.google.com/view/chohsieh-research/home), UCLA (advised by [Prof. Cho-Jui Hsieh](https://web.cs.ucla.edu/~chohsieh/)).
+I am an **M.S. student** at Yonsei University ([MCML Lab](https://mcml.yonsei.ac.kr/), advised by [Prof. Jong-Seok Lee](https://mcml.yonsei.ac.kr/professor)), and currently a **Visiting Researcher** at the [CML Lab](https://sites.google.com/view/chohsieh-research/home), UCLA (advised by [Prof. Cho-Jui Hsieh](https://web.cs.ucla.edu/~chohsieh/)).
 
-My research interests lie at the intersection of **Generative AI** and **Trustworthy AI**:
+I work on **visual generative models**: RL post-training and reward design, failure analysis, and mechanistic interpretability. Earlier I worked on adversarial patch attacks and defenses on object detectors. I am applying to CS PhD programs for Fall 2027.
 
-- **Generative AI**: visual generative models, post-training for generative models, visual reward modeling
-- **Trustworthy AI**: mechanistic interpretability, AI safety & reliability, robustness
-
-**Education**
-
-<table class="about-table" style="width: auto; max-width: 100%; border: none; margin-bottom: 1rem; font-size: 0.95em; line-height: 1.5; color: inherit; background: transparent;">
-  <tr>
-    <td style="white-space: nowrap; width: 11em; padding: 0.25rem 1rem 0.25rem 0; vertical-align: top; opacity: 0.7; border: none;">2025.03 – 2027.02</td>
-    <td style="padding: 0.25rem 0; border: none;"><b>M.S.</b>, School of Integrated Technology, <a href="https://www.yonsei.ac.kr" target="_blank">Yonsei University</a><br><span style="opacity: 0.7;">GPA 4.16/4.30</span></td>
-  </tr>
-  <tr>
-    <td style="white-space: nowrap; padding: 0.25rem 1rem 0.25rem 0; vertical-align: top; opacity: 0.7; border: none;">2023.01 – 2023.05</td>
-    <td style="padding: 0.25rem 0; border: none;"><b>Visiting Undergraduate Student</b>, <a href="https://www.berkeley.edu/" target="_blank">UC Berkeley</a></td>
-  </tr>
-  <tr>
-    <td style="white-space: nowrap; padding: 0.25rem 1rem 0.25rem 0; vertical-align: top; opacity: 0.7; border: none;">2020.03 – 2025.02</td>
-    <td style="padding: 0.25rem 0; border: none;"><b>B.S.</b>, Electronic and Information Engineering, <a href="https://ssu.ac.kr/" target="_blank">Soongsil University</a><br><span style="opacity: 0.7;">GPA 4.11/4.50, Magna Cum Laude</span></td>
-  </tr>
-</table>
-
-**Experience**
-
-<table class="about-table" style="width: auto; max-width: 100%; border: none; margin-bottom: 1rem; font-size: 0.95em; line-height: 1.5; color: inherit; background: transparent;">
-  <tr>
-    <td style="white-space: nowrap; width: 11em; padding: 0.25rem 1rem 0.25rem 0; vertical-align: top; opacity: 0.7; border: none;">2026.05 – 2026.10</td>
-    <td style="padding: 0.25rem 0; border: none;"><b>Visiting Researcher</b>, <a href="https://sites.google.com/view/chohsieh-research/home" target="_blank">CML Lab</a>, UCLA<br><span style="opacity: 0.7;">advised by <a href="https://web.cs.ucla.edu/~chohsieh/" target="_blank">Prof. Cho-Jui Hsieh</a></span></td>
-  </tr>
-  <tr>
-    <td style="white-space: nowrap; padding: 0.25rem 1rem 0.25rem 0; vertical-align: top; opacity: 0.7; border: none;">2025.03 – present</td>
-    <td style="padding: 0.25rem 0; border: none;"><b>M.S. Researcher</b>, <a href="https://mcml.yonsei.ac.kr" target="_blank">MCML Lab</a>, Yonsei University<br><span style="opacity: 0.7;">advised by <a href="https://mcml.yonsei.ac.kr/professor" target="_blank">Prof. Jong-Seok Lee</a></span></td>
-  </tr>
-  <tr>
-    <td style="white-space: nowrap; padding: 0.25rem 1rem 0.25rem 0; vertical-align: top; opacity: 0.7; border: none;">2023.06 – 2024.08</td>
-    <td style="padding: 0.25rem 0; border: none;"><b>Undergraduate Research Intern</b>, <a href="https://aisc.ssu.ac.kr/" target="_blank">AI Safety Center</a>, Soongsil University<br><span style="opacity: 0.7;">advised by Prof. Daeseon Choi</span></td>
-  </tr>
-</table>
+Before Yonsei, I earned my B.S. in Electronic and Information Engineering from Soongsil University (2025) and spent a semester at UC Berkeley as a visiting student (2023).
