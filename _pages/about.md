@@ -35,6 +35,6 @@ latest_posts:
 
 I am an **M.S. student** at Yonsei University ([MCML Lab](https://mcml.yonsei.ac.kr/), advised by [Prof. Jong-Seok Lee](https://mcml.yonsei.ac.kr/professor)), and currently a **Visiting Researcher** at the [CML Lab](https://sites.google.com/view/chohsieh-research/home), UCLA (advised by [Prof. Cho-Jui Hsieh](https://web.cs.ucla.edu/~chohsieh/)).
 
-I work on **visual generative models**: RL post-training and reward design, failure analysis, and mechanistic interpretability. I ask why a generative model fails to follow its conditions and where that failure lives inside the model. I also ask how a training signal can fix it without breaking the rest, and how such models should be evaluated. Earlier I worked on adversarial patch attacks and defenses on object detectors. I am applying to CS PhD programs for Fall 2027.
+I work on **visual generative models**: RL post-training and reward design, failure analysis, and mechanistic interpretability. I study why a generative model fails to follow its conditions and where that failure lives inside the model. I also study how a training signal can fix it without breaking the rest, and how such models should be evaluated. Earlier I worked on adversarial patch attacks and defenses on object detectors. I am applying to CS PhD programs for Fall 2027.
 
 Before Yonsei, I earned my B.S. in Electronic and Information Engineering from Soongsil University (2025) and spent a semester at UC Berkeley as a visiting student (2023).
