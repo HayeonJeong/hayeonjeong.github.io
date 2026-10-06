@@ -98,7 +98,7 @@
       "summary": "",
       "highlights": [
         "Part of the <a href=\"http://mcml.yonsei.ac.kr/\">MCML Lab</a>, advised by <a href=\"http://mcml.yonsei.ac.kr/professor\">Prof. Jong-Seok Lee</a>.",
-        "Formalized concept dominance in multi-concept diffusion generation and built DominanceBench; showed via controlled fine-tuning that low training-image diversity drives it, and found through head ablation that, unlike memorization, it cannot be removed by ablating any small set of heads <b>(ACCV '26)</b>."
+        "Formalized concept dominance in multi-concept diffusion generation and built DominanceBench; showed via controlled fine-tuning that low training-image diversity drives it, and found through head ablation that, unlike memorization, it cannot be removed by ablating any small set of heads <b>(ACCV '26, Oral)</b>."
       ]
     },
     {
@@ -119,7 +119,7 @@
     {
       "name": "Dominating vs. Dominated: Concept-Level Generative Collapse in Diffusion Models",
       "authors": "Hayeon Jeong, Jong-Seok Lee",
-      "publisher": "ACCV 2026",
+      "publisher": "ACCV 2026 (Oral)",
       "releaseDate": "2025-12-19",
       "url": "https://arxiv.org/abs/2512.20666",
       "summary": "We identify and analyze the Dominant-vs-Dominated (DvD) imbalance in text-to-image diffusion models, where one concept suppresses others in multi-concept generation. Through a systematic benchmark and attention-level analysis, we show that this behavior arises from limited data diversity and distributed cross-attention mechanisms, providing insights toward more reliable and controllable image generation."
